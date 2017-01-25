@@ -12,6 +12,9 @@
 #define LINE_LENGTH     635
 
 void ntscCuda(int N, float* luma, float* chroma_u, float* chroma_v, unsigned char* source);
+void load_reference_arrays(float * luma, float * chroma_u, float * chroma_v, int n);
+void clear_reference_arrays();
+
 void init_frame(float* luma, float* chroma_u, float* chroma_vi, int n);
 void init_img_source(unsigned char* src, int n);
 void write_csv(float* arr0, float* arr1, float* arr2, int n);
@@ -79,14 +82,13 @@ int main(int argc, char** argv)
 
     // load X, Y, store result
     init_frame(ref_luma, ref_chroma_u, ref_chroma_v, N);
-    std::memcpy(luma, ref_luma, N * sizeof(float));
-    std::memcpy(chroma_u, ref_chroma_u, N * sizeof(float));
-    std::memcpy(chroma_v, ref_chroma_v, N * sizeof(float));
+
+    load_reference_arrays(ref_luma, ref_chroma_u, ref_chroma_v, N);
 
     printCudaInfo();
 
-    for (int i=0; i<60; i++) {
-      ntscCuda(N, luma, chroma_u, chroma_v, ref_testSource);
+    for (int i=0; i<10000; i++) {
+        ntscCuda(N, luma, chroma_u, chroma_v, ref_testSource);
     }
 
     write_csv(luma, chroma_u, chroma_v, N);
@@ -96,6 +98,8 @@ int main(int argc, char** argv)
     //for (int i=635*200; i<635*201; i++){
     //    printf("i: %d, luma: %.3f, u: %.3f, v: %.3f\n", i, luma[i], chroma_u[i], chroma_v[i]);
     //}
+
+    clear_reference_arrays();
 
     delete [] ref_luma;
     delete [] ref_chroma_u;
