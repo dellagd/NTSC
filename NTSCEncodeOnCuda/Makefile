@@ -5,7 +5,7 @@ CU_FILES   := ntscProcess.cu
 
 CU_DEPS    :=
 
-CC_FILES   := main.cpp
+CC_FILES   := main.cpp lodepng.cpp
 
 ###########################################################
 
@@ -25,7 +25,7 @@ NVCC=nvcc
 NVCCFLAGS=-O3 -m64
 
 
-OBJS=$(OBJDIR)/main.o  $(OBJDIR)/ntscProcess.o
+OBJS=$(OBJDIR)/main.o  $(OBJDIR)/lodepng.o  $(OBJDIR)/ntscProcess.o
 
 
 .PHONY: dirs clean

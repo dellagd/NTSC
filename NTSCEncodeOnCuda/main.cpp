@@ -3,14 +3,22 @@
 #include <getopt.h>
 #include <string>
 #include <cstring>
+#include <iostream>
+
+#include "lodepng.h"
+
 
 #define ZLEVEL          0.3f
-#define LINE_LENGTH    635
+#define LINE_LENGTH     635
 
-void ntscCuda(int N, float* luma, float* chroma_u, float* chroma_v, float* source);
+void ntscCuda(int N, float* luma, float* chroma_u, float* chroma_v, unsigned char* source);
 void init_frame(float* luma, float* chroma_u, float* chroma_vi, int n);
-void init_img_source(float* src, int n);
+void init_img_source(unsigned char* src, int n);
+void write_csv(float* arr0, float* arr1, float* arr2, int n);
+void decodePNGFromFile(char * src, const char* filename);
 void printCudaInfo();
+
+int image_N = 4 * 242 * 514;
 
 
 // return GB/s
@@ -25,7 +33,6 @@ void usage(const char* progname) {
     printf("  -n  --arraysize <INT>  Number of elements in arrays\n");
     printf("  -?  --help             This message\n");
 }
-
 
 int main(int argc, char** argv)
 {
@@ -53,9 +60,11 @@ int main(int argc, char** argv)
             return 1;
         }
     }
+
+
     // end parsing of commandline options //////////////////////////////////////
 
-    float* ref_testSource = new float[N];
+    unsigned char * ref_testSource = new unsigned char[image_N];
     float* ref_luma = new float[N];
     float* ref_chroma_u = new float[N];
     float* ref_chroma_v = new float[N];
@@ -64,14 +73,15 @@ int main(int argc, char** argv)
     float* chroma_u = new float[N];
     float* chroma_v = new float[N];
 
+
     // load image
     init_img_source(ref_testSource, N);
 
     // load X, Y, store result
     init_frame(ref_luma, ref_chroma_u, ref_chroma_v, N);
-    std::memcpy(luma, ref_luma, N);
-    std::memcpy(chroma_u, ref_chroma_u, N);
-    std::memcpy(chroma_v, ref_chroma_v, N);
+    std::memcpy(luma, ref_luma, N * sizeof(float));
+    std::memcpy(chroma_u, ref_chroma_u, N * sizeof(float));
+    std::memcpy(chroma_v, ref_chroma_v, N * sizeof(float));
 
     printCudaInfo();
 
@@ -79,11 +89,13 @@ int main(int argc, char** argv)
       ntscCuda(N, luma, chroma_u, chroma_v, ref_testSource);
     }
 
+    write_csv(luma, chroma_u, chroma_v, N);
+
     printf("DONE\n");
 
-    /*for (int i=0; i<635; i++){
-        printf("i: %d, luma: %.3f, u: %.3f, v: %.3f\n", i, luma[i], chroma_u[i], chroma_v[i]);
-    }*/
+    //for (int i=635*200; i<635*201; i++){
+    //    printf("i: %d, luma: %.3f, u: %.3f, v: %.3f\n", i, luma[i], chroma_u[i], chroma_v[i]);
+    //}
 
     delete [] ref_luma;
     delete [] ref_chroma_u;
@@ -96,10 +108,29 @@ int main(int argc, char** argv)
     return 0;
 }
 
-void init_img_source(float* source, int n){
+void decodePNGFromFile(unsigned char * dst, const char* filename){
+    std::vector<unsigned char> image;
+    unsigned width, height;
+
+    unsigned err = lodepng::decode(image, width, height, filename);
+
+    std::copy(image.begin(), image.end(), dst);
+}
+
+void write_csv(float* arr0, float* arr1, float* arr2, int n){
+    FILE *fp;
+    fp = fopen("test.csv", "w+");
+    fprintf(fp, "Index, Luma, Chroma U, Chroma V\n");
+
     for (int i = 0; i < n; i++){
-        source[i] = (rand() / (float) RAND_MAX) * 256.0f;
+        fprintf(fp, "%d, %.3f, %.3f, %.3f\n", i, arr0[i], arr1[i], arr2[i]);
     }
+
+    fclose(fp);
+}
+
+void init_img_source(unsigned char* source, int n){
+    decodePNGFromFile(source, "maxresdefault.png");
 }
 
 void init_frame(float* luma, float* chroma_u, float* chroma_v, int n){
