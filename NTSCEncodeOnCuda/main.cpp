@@ -87,7 +87,7 @@ int main(int argc, char** argv)
 
     printCudaInfo();
 
-    for (int i=0; i<10000; i++) {
+    for (int i=0; i<50000; i++) {
         ntscCuda(N, luma, chroma_u, chroma_v, ref_testSource);
     }
 

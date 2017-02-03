@@ -13,6 +13,11 @@ float * dev_ref_luma;
 float * dev_ref_chroma_u;
 float * dev_ref_chroma_v;
 
+float* device_luma;
+float* device_chroma_u;
+float* device_chroma_v;
+unsigned char* device_source;
+
 __global__ void
 ntsc_encode_frame(int N, float* luma, float* chroma_u, float* chroma_v, unsigned char* source) {
     // compute overall index from position of thread in current block,
@@ -51,29 +56,18 @@ ntscCuda(int N, float* luma, float* chroma_u, float* chroma_v, unsigned char* so
     const int blocks = ((N / 635) - 20); //242 TV Lines
     const int threadsPerBlock = 514; //514 'pixels' per line
 
-    float* device_luma;
-    float* device_chroma_u;
-    float* device_chroma_v;
-    unsigned char* device_source;
-
     // start timing
     double startTime = CycleTimer::currentSeconds();
 
     //
-    // TODO allocate device memory buffers on the GPU using cudaMalloc
-    //
-    cudaMalloc(&device_luma, totalBytes);
-    cudaMalloc(&device_chroma_u, totalBytes);
-    cudaMalloc(&device_chroma_v, totalBytes);
-    cudaMalloc(&device_source, totalBytesUChar);
-
-    //
     // TODO copy input arrays to the GPU using cudaMemcpy
     //
+    /*
     cudaMemcpy(device_luma, dev_ref_luma, totalBytes, cudaMemcpyDeviceToDevice);
     cudaMemcpy(device_chroma_u, dev_ref_chroma_u, totalBytes, cudaMemcpyDeviceToDevice);
     cudaMemcpy(device_chroma_v, dev_ref_chroma_v, totalBytes, cudaMemcpyDeviceToDevice);
     cudaMemcpy(device_source, source, totalBytesUChar, cudaMemcpyHostToDevice);
+    */
 
     // run kernel
     ntsc_encode_frame<<<blocks, threadsPerBlock>>>(N, device_luma, device_chroma_u, device_chroma_v, device_source);
@@ -98,16 +92,12 @@ ntscCuda(int N, float* luma, float* chroma_u, float* chroma_v, unsigned char* so
     double overallDuration = endTime - startTime;
     printf("Overall: %.3f ms\t\t[%.3f GB/s]\n", 1000.f * overallDuration, toBW(totalBytes, overallDuration));
 
-    // TODO free memory buffers on the GPU
-    cudaFree(device_luma);
-    cudaFree(device_chroma_u);
-    cudaFree(device_chroma_v);
-    cudaFree(device_source);
 }
 
 void
 load_reference_arrays(float * luma, float * chroma_u, float * chroma_v, int n){
     int totalBytes = n * sizeof(float);
+    int totalBytesUChar = sizeof(unsigned char) * image_N;
 
     cudaMalloc(&dev_ref_luma, totalBytes);
     cudaMalloc(&dev_ref_chroma_u, totalBytes);
@@ -116,6 +106,14 @@ load_reference_arrays(float * luma, float * chroma_u, float * chroma_v, int n){
     cudaMemcpy(dev_ref_luma, luma, totalBytes, cudaMemcpyHostToDevice);
     cudaMemcpy(dev_ref_chroma_u, chroma_u, totalBytes, cudaMemcpyHostToDevice);
     cudaMemcpy(dev_ref_chroma_v, chroma_v, totalBytes, cudaMemcpyHostToDevice);
+
+    //
+    // TODO allocate device memory buffers on the GPU using cudaMalloc
+    //
+    cudaMalloc(&device_luma, totalBytes);
+    cudaMalloc(&device_chroma_u, totalBytes);
+    cudaMalloc(&device_chroma_v, totalBytes);
+    cudaMalloc(&device_source, totalBytesUChar);
 }
 
 void
@@ -123,6 +121,12 @@ clear_reference_arrays(){
     cudaFree(dev_ref_luma);
     cudaFree(dev_ref_chroma_u);
     cudaFree(dev_ref_chroma_v);
+
+    // TODO free memory buffers on the GPU
+    cudaFree(device_luma);
+    cudaFree(device_chroma_u);
+    cudaFree(device_chroma_v);
+    cudaFree(device_source);
 }
 
 void
