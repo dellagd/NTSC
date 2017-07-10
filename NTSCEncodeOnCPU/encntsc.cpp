@@ -1,6 +1,3 @@
-#include "opencv2/core.hpp"
-#include "opencv2/highgui.hpp"
-#include "opencv2/imgproc/imgproc.hpp"
 #include <sys/time.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -234,7 +231,7 @@ int main(int argc, char* argv[])
         if (!get_frame(cap, f, ref_frame))
             break;
 
-        //write_frame_to_file(f);
+        write_frame_to_file(f);
         
         char key = cvWaitKey(10);
         if (key == 27) // ESC
