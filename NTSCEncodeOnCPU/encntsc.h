@@ -9,6 +9,13 @@ struct frame {
     int length;
 };
 
+struct NTSCEncoder {
+    cv::VideoCapture cap;
+    float fps;
+    bool success;
+};
+
 frame new_frame();
 frame get_reference_frame();
-bool get_frame(cv::VideoCapture cap, frame f, frame ref_frame);
+NTSCEncoder new_ntscencoder(char *filename);
+bool get_frame(NTSCEncoder enc, frame f, frame ref_frame);

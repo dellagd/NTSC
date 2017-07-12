@@ -16,26 +16,6 @@ using namespace cv;
 int lines = 262; // 242 for lines, 9 for sync, 11 for blank
 int N = FRAME_LENGTH;
 
-void init_frame(float* luma, float* chroma_u, float* chroma_vi, int n);
-
-long int getusec(){
-    struct timeval starttime;
-    gettimeofday(&starttime, NULL);
-    return (starttime.tv_sec*1000000+starttime.tv_usec);
-}
-
-void ttill(long int start, int wait){
-    int offset = 0;
-    for(;;){
-        long int curr = getusec() + offset;
-        if (curr+5000000 < start){
-            //Rollover occured
-            offset = -60000000;
-        }
-        if (start+wait+offset < curr) break;
-    }
-}
-
 void fill_with_frame(float *luma, float *chroma_u, float *chroma_v, Mat frame){
     for (int row = 0; row < 242; row++){
         for (int col = 0; col < 526; col++){
@@ -54,93 +34,6 @@ void fill_with_frame(float *luma, float *chroma_u, float *chroma_v, Mat frame){
             chroma_v[arrIndex] = im_V;
         }
     }
-}
-
-void begin_proc(VideoCapture cap){
-    Mat frame;
-    float* ref_lum = new float[N];
-    float* ref_cu = new float[N];
-    float* ref_cv = new float[N];
-    float* luma = new float[N];
-    float* chroma_u = new float[N];
-    float* chroma_v = new float[N];
-
-    // load X, Y, store result
-    init_frame(ref_lum, ref_cu, ref_cv, N);
-    
-    printf("FPS of video: %f\n", cap.get(CAP_PROP_FPS));
-    double usec_per_frame = 1000000.0/cap.get(CAP_PROP_FPS);
-    printf("Frame period in ms: %f\n", usec_per_frame);
-
-    long int t1;
-    for(;;)
-    {
-        t1 = getusec();        
-
-        if (!cap.read(frame))             
-            break;
-
-        Mat resized;
-        resize(frame, resized, Size(526, 242));
-
-        memcpy(luma, ref_lum, N*sizeof(float));
-        memcpy(chroma_u, ref_cu, N*sizeof(float));
-        memcpy(chroma_v, ref_cv, N*sizeof(float));
-        fill_with_frame(luma, chroma_u, chroma_v, resized);
-
-        imshow("window", resized);
-        
-        char key = cvWaitKey(10);
-        if (key == 27) // ESC
-            break;
-        
-        //printf("Microseconds: %d\n", getusec());
-
-        ttill(t1, usec_per_frame);
-    }
-}
-
-void free_frame(frame f){
-    free(f.luma);
-    free(f.chroma_u);
-    free(f.chroma_v);
-}
-
-frame new_frame(){
-    frame f;
-    f.luma = (float*)calloc(FRAME_LENGTH, sizeof(float)); 
-    f.chroma_u = (float*)calloc(FRAME_LENGTH, sizeof(float)); 
-    f.chroma_v = (float*)calloc(FRAME_LENGTH, sizeof(float));
-
-    f.length = FRAME_LENGTH;
-
-    return f;
-}
-
-frame get_reference_frame(){
-    frame f = new_frame();
-    init_frame(f.luma, f.chroma_u, f.chroma_v, FRAME_LENGTH);
-
-    return f;
-}
-
-bool get_frame(VideoCapture cap, frame out, frame ref){
-    Mat rawframe;
-
-    if (!cap.read(rawframe))
-        return false;
-
-    Mat resized;
-    resize(rawframe, resized, Size(526, 242));
-    imshow("window", resized);
-
-    memcpy(out.luma, ref.luma, N*sizeof(float));
-    memcpy(out.chroma_u, ref.chroma_u, N*sizeof(float));
-    memcpy(out.chroma_v, ref.chroma_v, N*sizeof(float));
-    
-    fill_with_frame(out.luma, out.chroma_u, out.chroma_v, resized);
-
-    return true;    
 }
 
 void init_frame(float* luma, float* chroma_u, float* chroma_v, int n){
@@ -198,37 +91,79 @@ void init_frame(float* luma, float* chroma_u, float* chroma_v, int n){
     }
 }
 
-void write_frame_to_file(frame f){
-    FILE *of;
-    of = fopen("frame.csv", "w");
-
-    for(int i = 0; i < f.length; i++){
-        fprintf(of, "%0.2f,\n", f.luma[i]);
-    }
-
-    fclose(of);
+void free_frame(frame f){
+    free(f.luma);
+    free(f.chroma_u);
+    free(f.chroma_v);
 }
 
-int main(int argc, char* argv[])
-{ 
-    VideoCapture cap(argv[1]);
-    if (!cap.isOpened())
+frame new_frame(){
+    frame f;
+    f.luma = (float*)calloc(FRAME_LENGTH, sizeof(float)); 
+    f.chroma_u = (float*)calloc(FRAME_LENGTH, sizeof(float)); 
+    f.chroma_v = (float*)calloc(FRAME_LENGTH, sizeof(float));
+
+    f.length = FRAME_LENGTH;
+
+    return f;
+}
+
+frame get_reference_frame(){
+    frame f = new_frame();
+    init_frame(f.luma, f.chroma_u, f.chroma_v, FRAME_LENGTH);
+
+    return f;
+}
+
+bool get_frame(NTSCEncoder enc, frame out, frame ref){
+    Mat rawframe;
+
+    if (!enc.cap.read(rawframe))
+        return false;
+
+    Mat resized;
+    resize(rawframe, resized, Size(526, 242));
+    //imshow("window", resized);
+
+    memcpy(out.luma, ref.luma, N*sizeof(float));
+    memcpy(out.chroma_u, ref.chroma_u, N*sizeof(float));
+    memcpy(out.chroma_v, ref.chroma_v, N*sizeof(float));
+    
+    fill_with_frame(out.luma, out.chroma_u, out.chroma_v, resized);
+
+    return true;    
+}
+
+NTSCEncoder new_ntscencoder(char *filename){
+    NTSCEncoder ret;
+    ret.success = false;
+    VideoCapture c(filename);
+    if (!c.isOpened())
     {
-        std::cout << "!!! Failed to open file: " << argv[1] << std::endl;
-        return -1;
+        std::cout << "!!! Failed to open file: " << filename << std::endl;
+        return ret;
     }
+    ret.success = true;
+    ret.fps = c.get(CAP_PROP_FPS);
+    ret.cap = c;
+    return ret;
+}
+
+/*int main(int argc, char* argv[])
+{ 
+    NTSCEncoder enc = new_encoder(argv[1]);
 
     //begin_proc(cap); 
     
     frame f = new_frame();
     frame ref_frame = get_reference_frame();
     
-    double usec_per_frame = 1000000.0/cap.get(CAP_PROP_FPS);
+    double usec_per_frame = 1000000.0/enc.fps;
     long int t1;
     for(;;){
         t1 = getusec();
         
-        if (!get_frame(cap, f, ref_frame))
+        if (!get_frame(enc, f, ref_frame))
             break;
 
         write_frame_to_file(f);
@@ -241,6 +176,6 @@ int main(int argc, char* argv[])
     }
 
     return 0;
-}
+}*/
 
     
