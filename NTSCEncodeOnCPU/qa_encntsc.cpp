@@ -14,7 +14,9 @@ long int getusec(){
 
 void ttill(long int start, int wait){
     int offset = 0;
+#ifdef DEBUG 
     printf("Waiting %.2f ms\n", ((double)(start+wait-getusec()))/1000);
+#endif
     for(;;){
         //printf("Hit!\n");
         long int curr = getusec() + offset;
@@ -40,6 +42,9 @@ void write_frame_to_file(frame f){
 int main(int argc, char* argv[])
 { 
     NTSCEncoder enc = new_ntscencoder(argv[1]);
+#ifdef DEBUG
+    printf("Loaded video from file %s running at %.2f FPS\n", argv[1], enc.fps);
+#endif
 
     frame f = new_frame();
     frame ref_frame = get_reference_frame();
@@ -52,11 +57,15 @@ int main(int argc, char* argv[])
         if (!get_frame(enc, f, ref_frame))
             break;
 
-        //write_frame_to_file(f);
-        
-        //char key = cvWaitKey(1);
-        //if (key == 27) // ESC
-        //    break;
+#ifdef WRITE_CSV
+        write_frame_to_file(f);
+#endif
+
+#ifdef SHOW_IMAGE 
+        char key = cvWaitKey(1);
+        if (key == 27) // ESC
+            break;
+#endif
         
         ttill(t1, usec_per_frame);
     }

@@ -123,7 +123,10 @@ bool get_frame(NTSCEncoder enc, frame out, frame ref){
 
     Mat resized;
     resize(rawframe, resized, Size(526, 242));
-    //imshow("window", resized);
+
+#ifdef SHOW_IMAGE
+    imshow("window", resized);
+#endif
 
     memcpy(out.luma, ref.luma, N*sizeof(float));
     memcpy(out.chroma_u, ref.chroma_u, N*sizeof(float));
@@ -134,13 +137,28 @@ bool get_frame(NTSCEncoder enc, frame out, frame ref){
     return true;    
 }
 
-NTSCEncoder new_ntscencoder(char *filename){
+NTSCEncoder new_ntscencoder_file(char *filename){
     NTSCEncoder ret;
     ret.success = false;
     VideoCapture c(filename);
     if (!c.isOpened())
     {
         std::cout << "!!! Failed to open file: " << filename << std::endl;
+        return ret;
+    }
+    ret.success = true;
+    ret.fps = c.get(CAP_PROP_FPS);
+    ret.cap = c;
+    return ret;
+}
+
+NTSCEncoder new_ntscencoder_cam(size_t camera_num){
+    NTSCEncoder ret;
+    ret.success = false;
+    VideoCapture c;
+    if (!c.open(camera_num))
+    {
+        printf("!!! Failed to open camera %d\n", camera_num);
         return ret;
     }
     ret.success = true;
