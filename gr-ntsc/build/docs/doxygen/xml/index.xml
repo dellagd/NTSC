@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.11">
+  <compound refid="classgr_1_1ntsc_1_1encoder" kind="class"><name>gr::ntsc::encoder</name>
+    <member refid="classgr_1_1ntsc_1_1encoder_1ab783319217cf325fc076869680fc265e" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1ntsc_1_1encoder_1a637f8c527c213f2ebd8e20c044ef70d4" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1ntsc_1_1encoder__impl" kind="class"><name>gr::ntsc::encoder_impl</name>
+    <member refid="classgr_1_1ntsc_1_1encoder__impl_1a7b965e0746293371928a57ec96fcb9d4" kind="variable"><name>p_enc</name></member>
+    <member refid="classgr_1_1ntsc_1_1encoder__impl_1a4b23fee84aa1f2d84760aaa1bc922ad0" kind="variable"><name>p_ref_frame</name></member>
+    <member refid="classgr_1_1ntsc_1_1encoder__impl_1ab0e5cd74fb2f844f88ccddaf641ab419" kind="variable"><name>p_vid_frame</name></member>
+    <member refid="classgr_1_1ntsc_1_1encoder__impl_1ad471a0e39de497c8f57dcfaab6666528" kind="variable"><name>p_filepath</name></member>
+    <member refid="classgr_1_1ntsc_1_1encoder__impl_1ad0d1f1a9e35c70ba38d70886f900990a" kind="variable"><name>p_decim</name></member>
+    <member refid="classgr_1_1ntsc_1_1encoder__impl_1a52b1f03dec91928c368f40c562e2071d" kind="variable"><name>p_repeat</name></member>
+    <member refid="classgr_1_1ntsc_1_1encoder__impl_1a389cd7cf4003e2a0e6b470d64727da1d" kind="function"><name>encoder_impl</name></member>
+    <member refid="classgr_1_1ntsc_1_1encoder__impl_1aa9ac98dc09609cf9838b038291ec19d4" kind="function"><name>~encoder_impl</name></member>
+    <member refid="classgr_1_1ntsc_1_1encoder__impl_1a160fde3bac700091848d9d165ce3c386" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="structframe" kind="struct"><name>frame</name>
+    <member refid="structframe_1a2f652855602e2fe6c5edd416df9ad2a9" kind="variable"><name>luma</name></member>
+    <member refid="structframe_1adf82e1d5f4132526deb3b1d9d3bc223d" kind="variable"><name>chroma_u</name></member>
+    <member refid="structframe_1aedc5735e139ff85b62671775d3e6fc29" kind="variable"><name>chroma_v</name></member>
+    <member refid="structframe_1a7b22e0dd68e5d9e2c9b2a1edb6b637c1" kind="variable"><name>length</name></member>
+  </compound>
+  <compound refid="structNTSCEncoder" kind="struct"><name>NTSCEncoder</name>
+    <member refid="structNTSCEncoder_1a7470cb0bfbb12ecb7c5d520ec8210a52" kind="variable"><name>cap</name></member>
+    <member refid="structNTSCEncoder_1add8da2e8b22e1be15e5e15f05fc6ebcb" kind="variable"><name>fps</name></member>
+    <member refid="structNTSCEncoder_1af891422010795b406efdefd2249581b8" kind="variable"><name>success</name></member>
+  </compound>
+  <compound refid="namespacegr" kind="namespace"><name>gr</name>
+  </compound>
+  <compound refid="namespacegr_1_1ntsc" kind="namespace"><name>gr::ntsc</name>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="api_8h" kind="file"><name>api.h</name>
+    <member refid="api_8h_1a2af8bbcf6bb7023f1fbe419c0e626cd8" kind="define"><name>NTSC_API</name></member>
+  </compound>
+  <compound refid="encntsc_8h" kind="file"><name>encntsc.h</name>
+    <member refid="encntsc_8h_1aafafbfe4d83a32f448bd131a94c30bf3" kind="function"><name>free_frame</name></member>
+    <member refid="encntsc_8h_1a54470e7f9263df3d93ab2fc7cf8486e6" kind="function"><name>new_frame</name></member>
+    <member refid="encntsc_8h_1a2df191cc36768bd44824aab78d1fe0cb" kind="function"><name>get_reference_frame</name></member>
+    <member refid="encntsc_8h_1a5fecf2f4fec929098aee2b2a9782956f" kind="function"><name>new_ntscencoder</name></member>
+    <member refid="encntsc_8h_1ad3222801365673ea2607cac913ba1bc0" kind="function"><name>get_frame</name></member>
+  </compound>
+  <compound refid="encoder_8h" kind="file"><name>encoder.h</name>
+  </compound>
+  <compound refid="encoder__impl_8h" kind="file"><name>encoder_impl.h</name>
+  </compound>
+  <compound refid="group__defs_8dox" kind="file"><name>group_defs.dox</name>
+  </compound>
+  <compound refid="main__page_8dox" kind="file"><name>main_page.dox</name>
+  </compound>
+  <compound refid="group__block" kind="group"><name>block</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_97aefd0d527b934f1d99a682da8fe6a9" kind="dir"><name>lib</name>
+  </compound>
+  <compound refid="dir_70c3a9d3aa823787ae0ce294ad57d362" kind="dir"><name>ntsc</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

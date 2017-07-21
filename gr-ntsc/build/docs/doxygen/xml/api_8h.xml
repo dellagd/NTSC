@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="api_8h" kind="file" language="C++">
+    <compoundname>api.h</compoundname>
+    <includes local="no">gnuradio/attributes.h</includes>
+    <includedby refid="encoder_8h" local="no">encoder.h</includedby>
+    <incdepgraph>
+      <node id="32">
+        <label>gnuradio/attributes.h</label>
+      </node>
+      <node id="31">
+        <label>api.h</label>
+        <link refid="api.h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="35">
+        <label>encoder_impl.h</label>
+        <link refid="encoder__impl_8h"/>
+      </node>
+      <node id="34">
+        <label>encoder.h</label>
+        <link refid="encoder_8h"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>api.h</label>
+        <link refid="api.h"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="api_8h_1a2af8bbcf6bb7023f1fbe419c0e626cd8" prot="public" static="no">
+        <name>NTSC_API</name>
+        <initializer>__GR_ATTR_IMPORT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/griffin/Documents/gr-ntsc/include/ntsc/api.h" line="30" column="12" bodyfile="/home/griffin/Documents/gr-ntsc/include/ntsc/api.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/griffin/Documents/gr-ntsc/include/ntsc/api.h"/>
+  </compounddef>
+</doxygen>

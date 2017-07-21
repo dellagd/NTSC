@@ -59,27 +59,14 @@ ntscCuda(int N, float* luma, float* chroma_u, float* chroma_v, unsigned char* so
     // start timing
     double startTime = CycleTimer::currentSeconds();
 
-    //
-    // TODO copy input arrays to the GPU using cudaMemcpy
-    //
-    /*
-    cudaMemcpy(device_luma, dev_ref_luma, totalBytes, cudaMemcpyDeviceToDevice);
-    cudaMemcpy(device_chroma_u, dev_ref_chroma_u, totalBytes, cudaMemcpyDeviceToDevice);
-    cudaMemcpy(device_chroma_v, dev_ref_chroma_v, totalBytes, cudaMemcpyDeviceToDevice);
-    cudaMemcpy(device_source, source, totalBytesUChar, cudaMemcpyHostToDevice);
-    */
-
     // run kernel
     ntsc_encode_frame<<<blocks, threadsPerBlock>>>(N, device_luma, device_chroma_u, device_chroma_v, device_source);
     cudaThreadSynchronize();
 
-    //
-    // TODO copy result from GPU using cudaMemcpy
-    //
+    // copy result from GPU using cudaMemcpy
     cudaMemcpy(luma, device_luma, totalBytes, cudaMemcpyDeviceToHost);
     cudaMemcpy(chroma_u, device_chroma_u, totalBytes, cudaMemcpyDeviceToHost);
     cudaMemcpy(chroma_v, device_chroma_v, totalBytes, cudaMemcpyDeviceToHost);
-    //cudaMemcpy(source, source, totalBytes, cudaMemcpyDeviceToHost);
 
     // end timing after result has been copied back into host memory
     double endTime = CycleTimer::currentSeconds();

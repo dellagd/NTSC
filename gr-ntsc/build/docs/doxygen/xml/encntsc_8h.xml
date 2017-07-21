@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="encntsc_8h" kind="file" language="C++">
+    <compoundname>encntsc.h</compoundname>
+    <includes local="yes">opencv2/core.hpp</includes>
+    <includes local="yes">opencv2/highgui.hpp</includes>
+    <includes local="yes">opencv2/imgproc/imgproc.hpp</includes>
+    <includedby refid="encoder__impl_8h" local="yes">encoder_impl.h</includedby>
+    <incdepgraph>
+      <node id="36">
+        <label>encntsc.h</label>
+        <link refid="encntsc.h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>opencv2/imgproc/imgproc.hpp</label>
+      </node>
+      <node id="37">
+        <label>opencv2/core.hpp</label>
+      </node>
+      <node id="38">
+        <label>opencv2/highgui.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="41">
+        <label>encoder_impl.h</label>
+        <link refid="encoder__impl_8h"/>
+      </node>
+      <node id="40">
+        <label>encntsc.h</label>
+        <link refid="encntsc.h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structframe" prot="public">frame</innerclass>
+    <innerclass refid="structNTSCEncoder" prot="public">NTSCEncoder</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="encntsc_8h_1aafafbfe4d83a32f448bd131a94c30bf3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void free_frame</definition>
+        <argsstring>(frame f)</argsstring>
+        <name>free_frame</name>
+        <param>
+          <type><ref refid="structframe" kindref="compound">frame</ref></type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/griffin/Documents/gr-ntsc/lib/encntsc.h" line="22" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="encntsc_8h_1a54470e7f9263df3d93ab2fc7cf8486e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structframe" kindref="compound">frame</ref></type>
+        <definition>frame new_frame</definition>
+        <argsstring>()</argsstring>
+        <name>new_frame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/griffin/Documents/gr-ntsc/lib/encntsc.h" line="23" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="encntsc_8h_1a2df191cc36768bd44824aab78d1fe0cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structframe" kindref="compound">frame</ref></type>
+        <definition>frame get_reference_frame</definition>
+        <argsstring>()</argsstring>
+        <name>get_reference_frame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/griffin/Documents/gr-ntsc/lib/encntsc.h" line="24" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="encntsc_8h_1a5fecf2f4fec929098aee2b2a9782956f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structNTSCEncoder" kindref="compound">NTSCEncoder</ref></type>
+        <definition>NTSCEncoder new_ntscencoder</definition>
+        <argsstring>(char *filename)</argsstring>
+        <name>new_ntscencoder</name>
+        <param>
+          <type>char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/griffin/Documents/gr-ntsc/lib/encntsc.h" line="25" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="encntsc_8h_1ad3222801365673ea2607cac913ba1bc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool get_frame</definition>
+        <argsstring>(NTSCEncoder enc, frame f, frame ref_frame)</argsstring>
+        <name>get_frame</name>
+        <param>
+          <type><ref refid="structNTSCEncoder" kindref="compound">NTSCEncoder</ref></type>
+          <declname>enc</declname>
+        </param>
+        <param>
+          <type><ref refid="structframe" kindref="compound">frame</ref></type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type><ref refid="structframe" kindref="compound">frame</ref></type>
+          <declname>ref_frame</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/griffin/Documents/gr-ntsc/lib/encntsc.h" line="26" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/griffin/Documents/gr-ntsc/lib/encntsc.h"/>
+  </compounddef>
+</doxygen>

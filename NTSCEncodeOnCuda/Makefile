@@ -16,10 +16,12 @@ CXX=g++ -m64
 CXXFLAGS=-O3 -Wall
 ifeq ($(ARCH), Darwin)
 # Building on mac
-LDFLAGS=-L/usr/local/depot/cuda-7.5/lib/ -lcudart
+LDFLAGS=-L/usr/local/cuda-8.0/lib/ -lcudart
+#LDFLAGS=-L/usr/local/depot/cuda-7.5/lib/ -lcudart
 else
 # Building on Linux
-LDFLAGS=-L/usr/local/depot/cuda-7.5/lib64/ -lcudart
+LDFLAGS=-L/usr/local/cuda-8.0/lib64/ -lcudart
+#LDFLAGS=-L/usr/local/depot/cuda-7.5/lib64/ -lcudart
 endif
 NVCC=nvcc
 NVCCFLAGS=-O3 -m64

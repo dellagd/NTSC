@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<block>
+  <name>NTSC Image Encoder</name>
+  <key>ntsc_encoder</key>
+  <category>[ntsc]</category>
+  <import>import ntsc</import>
+  <make>ntsc.encoder($videofile, $decim, $use_webcam)</make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+  <param>
+	<name>Video Source</name>
+	<key>use_webcam</key>
+	<value>False</value>
+	<type>enum</type>
+	<option>
+	  <name>Use File</name>
+	  <key>False</key>
+	</option>
+	<option>
+      <name>Use Webcam</name>
+	  <key>True</key>
+    </option>
+  </param>
+  
+  <param>
+    <name>File Path</name>
+    <key>videofile</key>
+    <value></value>
+    <type>file_open</type>
+  </param>
+  
+  <param>
+    <name>Decimation</name>
+    <key>decim</key>
+    <type>int</type>
+  </param>
+
+  <!-- Make one 'source' node per output. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <source>
+    <name>Luma</name>
+    <type>float</type>
+  </source>
+  
+  <source>
+    <name>Chroma (I)</name>
+    <type>float</type>
+  </source>
+  
+  <source>
+    <name>Chroma (Q)</name>
+    <type>float</type>
+  </source>
+</block>
