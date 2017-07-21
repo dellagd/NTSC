@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/griffin/Documents/gr-ntsc/lib/qa_ntsc.cc" "/home/griffin/Documents/gr-ntsc/build/lib/CMakeFiles/test-ntsc.dir/qa_ntsc.cc.o"
-  "/home/griffin/Documents/gr-ntsc/lib/test_ntsc.cc" "/home/griffin/Documents/gr-ntsc/build/lib/CMakeFiles/test-ntsc.dir/test_ntsc.cc.o"
+  "/home/griffin/NTSC/gr-ntsc/lib/qa_ntsc.cc" "/home/griffin/NTSC/gr-ntsc/build/lib/CMakeFiles/test-ntsc.dir/qa_ntsc.cc.o"
+  "/home/griffin/NTSC/gr-ntsc/lib/test_ntsc.cc" "/home/griffin/NTSC/gr-ntsc/build/lib/CMakeFiles/test-ntsc.dir/test_ntsc.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -22,7 +22,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/griffin/Documents/gr-ntsc/build/lib/CMakeFiles/gnuradio-ntsc.dir/DependInfo.cmake"
+  "/home/griffin/NTSC/gr-ntsc/build/lib/CMakeFiles/gnuradio-ntsc.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

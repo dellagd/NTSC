@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/griffin/Documents/gr-ntsc
+CMAKE_SOURCE_DIR = /home/griffin/NTSC/gr-ntsc
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/griffin/Documents/gr-ntsc/build
+CMAKE_BINARY_DIR = /home/griffin/NTSC/gr-ntsc/build
 
 # Utility rule file for ntsc_swig_swig_doc.
 
@@ -57,13 +57,13 @@ swig/CMakeFiles/ntsc_swig_swig_doc: swig/ntsc_swig_doc.i
 
 
 swig/ntsc_swig_doc.i: swig/ntsc_swig_doc_swig_docs/xml/index.xml
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/griffin/Documents/gr-ntsc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating python docstrings for ntsc_swig_doc"
-	cd /home/griffin/Documents/gr-ntsc/docs/doxygen && /usr/bin/python2 -B /home/griffin/Documents/gr-ntsc/docs/doxygen/swig_doc.py /home/griffin/Documents/gr-ntsc/build/swig/ntsc_swig_doc_swig_docs/xml /home/griffin/Documents/gr-ntsc/build/swig/ntsc_swig_doc.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/griffin/NTSC/gr-ntsc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating python docstrings for ntsc_swig_doc"
+	cd /home/griffin/NTSC/gr-ntsc/docs/doxygen && /usr/bin/python2 -B /home/griffin/NTSC/gr-ntsc/docs/doxygen/swig_doc.py /home/griffin/NTSC/gr-ntsc/build/swig/ntsc_swig_doc_swig_docs/xml /home/griffin/NTSC/gr-ntsc/build/swig/ntsc_swig_doc.i
 
 swig/ntsc_swig_doc_swig_docs/xml/index.xml: swig/_ntsc_swig_doc_tag
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/griffin/Documents/gr-ntsc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating doxygen xml for ntsc_swig_doc docs"
-	cd /home/griffin/Documents/gr-ntsc/build/swig && ./_ntsc_swig_doc_tag
-	cd /home/griffin/Documents/gr-ntsc/build/swig && /usr/bin/doxygen /home/griffin/Documents/gr-ntsc/build/swig/ntsc_swig_doc_swig_docs/Doxyfile
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/griffin/NTSC/gr-ntsc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating doxygen xml for ntsc_swig_doc docs"
+	cd /home/griffin/NTSC/gr-ntsc/build/swig && ./_ntsc_swig_doc_tag
+	cd /home/griffin/NTSC/gr-ntsc/build/swig && /usr/bin/doxygen /home/griffin/NTSC/gr-ntsc/build/swig/ntsc_swig_doc_swig_docs/Doxyfile
 
 ntsc_swig_swig_doc: swig/CMakeFiles/ntsc_swig_swig_doc
 ntsc_swig_swig_doc: swig/ntsc_swig_doc.i
@@ -78,10 +78,10 @@ swig/CMakeFiles/ntsc_swig_swig_doc.dir/build: ntsc_swig_swig_doc
 .PHONY : swig/CMakeFiles/ntsc_swig_swig_doc.dir/build
 
 swig/CMakeFiles/ntsc_swig_swig_doc.dir/clean:
-	cd /home/griffin/Documents/gr-ntsc/build/swig && $(CMAKE_COMMAND) -P CMakeFiles/ntsc_swig_swig_doc.dir/cmake_clean.cmake
+	cd /home/griffin/NTSC/gr-ntsc/build/swig && $(CMAKE_COMMAND) -P CMakeFiles/ntsc_swig_swig_doc.dir/cmake_clean.cmake
 .PHONY : swig/CMakeFiles/ntsc_swig_swig_doc.dir/clean
 
 swig/CMakeFiles/ntsc_swig_swig_doc.dir/depend:
-	cd /home/griffin/Documents/gr-ntsc/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/griffin/Documents/gr-ntsc /home/griffin/Documents/gr-ntsc/swig /home/griffin/Documents/gr-ntsc/build /home/griffin/Documents/gr-ntsc/build/swig /home/griffin/Documents/gr-ntsc/build/swig/CMakeFiles/ntsc_swig_swig_doc.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/griffin/NTSC/gr-ntsc/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/griffin/NTSC/gr-ntsc /home/griffin/NTSC/gr-ntsc/swig /home/griffin/NTSC/gr-ntsc/build /home/griffin/NTSC/gr-ntsc/build/swig /home/griffin/NTSC/gr-ntsc/build/swig/CMakeFiles/ntsc_swig_swig_doc.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : swig/CMakeFiles/ntsc_swig_swig_doc.dir/depend
 

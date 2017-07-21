@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/griffin/Documents/gr-ntsc
+CMAKE_SOURCE_DIR = /home/griffin/NTSC/gr-ntsc
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/griffin/Documents/gr-ntsc/build
+CMAKE_BINARY_DIR = /home/griffin/NTSC/gr-ntsc/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -135,14 +135,14 @@ install/strip/fast: install/strip
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/griffin/Documents/gr-ntsc/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/Documents/gr-ntsc/build/CMakeFiles /home/griffin/Documents/gr-ntsc/build/lib/CMakeFiles/progress.marks
-	cd /home/griffin/Documents/gr-ntsc/build && $(MAKE) -f CMakeFiles/Makefile2 lib/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/Documents/gr-ntsc/build/CMakeFiles 0
+	cd /home/griffin/NTSC/gr-ntsc/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/NTSC/gr-ntsc/build/CMakeFiles /home/griffin/NTSC/gr-ntsc/build/lib/CMakeFiles/progress.marks
+	cd /home/griffin/NTSC/gr-ntsc/build && $(MAKE) -f CMakeFiles/Makefile2 lib/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/NTSC/gr-ntsc/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/griffin/Documents/gr-ntsc/build && $(MAKE) -f CMakeFiles/Makefile2 lib/clean
+	cd /home/griffin/NTSC/gr-ntsc/build && $(MAKE) -f CMakeFiles/Makefile2 lib/clean
 .PHONY : clean
 
 # The main clean target
@@ -152,22 +152,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/griffin/Documents/gr-ntsc/build && $(MAKE) -f CMakeFiles/Makefile2 lib/preinstall
+	cd /home/griffin/NTSC/gr-ntsc/build && $(MAKE) -f CMakeFiles/Makefile2 lib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/griffin/Documents/gr-ntsc/build && $(MAKE) -f CMakeFiles/Makefile2 lib/preinstall
+	cd /home/griffin/NTSC/gr-ntsc/build && $(MAKE) -f CMakeFiles/Makefile2 lib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/griffin/Documents/gr-ntsc/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/griffin/NTSC/gr-ntsc/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 lib/CMakeFiles/gnuradio-ntsc.dir/rule:
-	cd /home/griffin/Documents/gr-ntsc/build && $(MAKE) -f CMakeFiles/Makefile2 lib/CMakeFiles/gnuradio-ntsc.dir/rule
+	cd /home/griffin/NTSC/gr-ntsc/build && $(MAKE) -f CMakeFiles/Makefile2 lib/CMakeFiles/gnuradio-ntsc.dir/rule
 .PHONY : lib/CMakeFiles/gnuradio-ntsc.dir/rule
 
 # Convenience name for target.
@@ -177,12 +177,12 @@ gnuradio-ntsc: lib/CMakeFiles/gnuradio-ntsc.dir/rule
 
 # fast build rule for target.
 gnuradio-ntsc/fast:
-	cd /home/griffin/Documents/gr-ntsc/build && $(MAKE) -f lib/CMakeFiles/gnuradio-ntsc.dir/build.make lib/CMakeFiles/gnuradio-ntsc.dir/build
+	cd /home/griffin/NTSC/gr-ntsc/build && $(MAKE) -f lib/CMakeFiles/gnuradio-ntsc.dir/build.make lib/CMakeFiles/gnuradio-ntsc.dir/build
 .PHONY : gnuradio-ntsc/fast
 
 # Convenience name for target.
 lib/CMakeFiles/test-ntsc.dir/rule:
-	cd /home/griffin/Documents/gr-ntsc/build && $(MAKE) -f CMakeFiles/Makefile2 lib/CMakeFiles/test-ntsc.dir/rule
+	cd /home/griffin/NTSC/gr-ntsc/build && $(MAKE) -f CMakeFiles/Makefile2 lib/CMakeFiles/test-ntsc.dir/rule
 .PHONY : lib/CMakeFiles/test-ntsc.dir/rule
 
 # Convenience name for target.
@@ -192,7 +192,7 @@ test-ntsc: lib/CMakeFiles/test-ntsc.dir/rule
 
 # fast build rule for target.
 test-ntsc/fast:
-	cd /home/griffin/Documents/gr-ntsc/build && $(MAKE) -f lib/CMakeFiles/test-ntsc.dir/build.make lib/CMakeFiles/test-ntsc.dir/build
+	cd /home/griffin/NTSC/gr-ntsc/build && $(MAKE) -f lib/CMakeFiles/test-ntsc.dir/build.make lib/CMakeFiles/test-ntsc.dir/build
 .PHONY : test-ntsc/fast
 
 encntsc.o: encntsc.cpp.o
@@ -201,7 +201,7 @@ encntsc.o: encntsc.cpp.o
 
 # target to build an object file
 encntsc.cpp.o:
-	cd /home/griffin/Documents/gr-ntsc/build && $(MAKE) -f lib/CMakeFiles/gnuradio-ntsc.dir/build.make lib/CMakeFiles/gnuradio-ntsc.dir/encntsc.cpp.o
+	cd /home/griffin/NTSC/gr-ntsc/build && $(MAKE) -f lib/CMakeFiles/gnuradio-ntsc.dir/build.make lib/CMakeFiles/gnuradio-ntsc.dir/encntsc.cpp.o
 .PHONY : encntsc.cpp.o
 
 encntsc.i: encntsc.cpp.i
@@ -210,7 +210,7 @@ encntsc.i: encntsc.cpp.i
 
 # target to preprocess a source file
 encntsc.cpp.i:
-	cd /home/griffin/Documents/gr-ntsc/build && $(MAKE) -f lib/CMakeFiles/gnuradio-ntsc.dir/build.make lib/CMakeFiles/gnuradio-ntsc.dir/encntsc.cpp.i
+	cd /home/griffin/NTSC/gr-ntsc/build && $(MAKE) -f lib/CMakeFiles/gnuradio-ntsc.dir/build.make lib/CMakeFiles/gnuradio-ntsc.dir/encntsc.cpp.i
 .PHONY : encntsc.cpp.i
 
 encntsc.s: encntsc.cpp.s
@@ -219,7 +219,7 @@ encntsc.s: encntsc.cpp.s
 
 # target to generate assembly for a file
 encntsc.cpp.s:
-	cd /home/griffin/Documents/gr-ntsc/build && $(MAKE) -f lib/CMakeFiles/gnuradio-ntsc.dir/build.make lib/CMakeFiles/gnuradio-ntsc.dir/encntsc.cpp.s
+	cd /home/griffin/NTSC/gr-ntsc/build && $(MAKE) -f lib/CMakeFiles/gnuradio-ntsc.dir/build.make lib/CMakeFiles/gnuradio-ntsc.dir/encntsc.cpp.s
 .PHONY : encntsc.cpp.s
 
 encoder_impl.o: encoder_impl.cc.o
@@ -228,7 +228,7 @@ encoder_impl.o: encoder_impl.cc.o
 
 # target to build an object file
 encoder_impl.cc.o:
-	cd /home/griffin/Documents/gr-ntsc/build && $(MAKE) -f lib/CMakeFiles/gnuradio-ntsc.dir/build.make lib/CMakeFiles/gnuradio-ntsc.dir/encoder_impl.cc.o
+	cd /home/griffin/NTSC/gr-ntsc/build && $(MAKE) -f lib/CMakeFiles/gnuradio-ntsc.dir/build.make lib/CMakeFiles/gnuradio-ntsc.dir/encoder_impl.cc.o
 .PHONY : encoder_impl.cc.o
 
 encoder_impl.i: encoder_impl.cc.i
@@ -237,7 +237,7 @@ encoder_impl.i: encoder_impl.cc.i
 
 # target to preprocess a source file
 encoder_impl.cc.i:
-	cd /home/griffin/Documents/gr-ntsc/build && $(MAKE) -f lib/CMakeFiles/gnuradio-ntsc.dir/build.make lib/CMakeFiles/gnuradio-ntsc.dir/encoder_impl.cc.i
+	cd /home/griffin/NTSC/gr-ntsc/build && $(MAKE) -f lib/CMakeFiles/gnuradio-ntsc.dir/build.make lib/CMakeFiles/gnuradio-ntsc.dir/encoder_impl.cc.i
 .PHONY : encoder_impl.cc.i
 
 encoder_impl.s: encoder_impl.cc.s
@@ -246,7 +246,7 @@ encoder_impl.s: encoder_impl.cc.s
 
 # target to generate assembly for a file
 encoder_impl.cc.s:
-	cd /home/griffin/Documents/gr-ntsc/build && $(MAKE) -f lib/CMakeFiles/gnuradio-ntsc.dir/build.make lib/CMakeFiles/gnuradio-ntsc.dir/encoder_impl.cc.s
+	cd /home/griffin/NTSC/gr-ntsc/build && $(MAKE) -f lib/CMakeFiles/gnuradio-ntsc.dir/build.make lib/CMakeFiles/gnuradio-ntsc.dir/encoder_impl.cc.s
 .PHONY : encoder_impl.cc.s
 
 qa_ntsc.o: qa_ntsc.cc.o
@@ -255,7 +255,7 @@ qa_ntsc.o: qa_ntsc.cc.o
 
 # target to build an object file
 qa_ntsc.cc.o:
-	cd /home/griffin/Documents/gr-ntsc/build && $(MAKE) -f lib/CMakeFiles/test-ntsc.dir/build.make lib/CMakeFiles/test-ntsc.dir/qa_ntsc.cc.o
+	cd /home/griffin/NTSC/gr-ntsc/build && $(MAKE) -f lib/CMakeFiles/test-ntsc.dir/build.make lib/CMakeFiles/test-ntsc.dir/qa_ntsc.cc.o
 .PHONY : qa_ntsc.cc.o
 
 qa_ntsc.i: qa_ntsc.cc.i
@@ -264,7 +264,7 @@ qa_ntsc.i: qa_ntsc.cc.i
 
 # target to preprocess a source file
 qa_ntsc.cc.i:
-	cd /home/griffin/Documents/gr-ntsc/build && $(MAKE) -f lib/CMakeFiles/test-ntsc.dir/build.make lib/CMakeFiles/test-ntsc.dir/qa_ntsc.cc.i
+	cd /home/griffin/NTSC/gr-ntsc/build && $(MAKE) -f lib/CMakeFiles/test-ntsc.dir/build.make lib/CMakeFiles/test-ntsc.dir/qa_ntsc.cc.i
 .PHONY : qa_ntsc.cc.i
 
 qa_ntsc.s: qa_ntsc.cc.s
@@ -273,7 +273,7 @@ qa_ntsc.s: qa_ntsc.cc.s
 
 # target to generate assembly for a file
 qa_ntsc.cc.s:
-	cd /home/griffin/Documents/gr-ntsc/build && $(MAKE) -f lib/CMakeFiles/test-ntsc.dir/build.make lib/CMakeFiles/test-ntsc.dir/qa_ntsc.cc.s
+	cd /home/griffin/NTSC/gr-ntsc/build && $(MAKE) -f lib/CMakeFiles/test-ntsc.dir/build.make lib/CMakeFiles/test-ntsc.dir/qa_ntsc.cc.s
 .PHONY : qa_ntsc.cc.s
 
 test_ntsc.o: test_ntsc.cc.o
@@ -282,7 +282,7 @@ test_ntsc.o: test_ntsc.cc.o
 
 # target to build an object file
 test_ntsc.cc.o:
-	cd /home/griffin/Documents/gr-ntsc/build && $(MAKE) -f lib/CMakeFiles/test-ntsc.dir/build.make lib/CMakeFiles/test-ntsc.dir/test_ntsc.cc.o
+	cd /home/griffin/NTSC/gr-ntsc/build && $(MAKE) -f lib/CMakeFiles/test-ntsc.dir/build.make lib/CMakeFiles/test-ntsc.dir/test_ntsc.cc.o
 .PHONY : test_ntsc.cc.o
 
 test_ntsc.i: test_ntsc.cc.i
@@ -291,7 +291,7 @@ test_ntsc.i: test_ntsc.cc.i
 
 # target to preprocess a source file
 test_ntsc.cc.i:
-	cd /home/griffin/Documents/gr-ntsc/build && $(MAKE) -f lib/CMakeFiles/test-ntsc.dir/build.make lib/CMakeFiles/test-ntsc.dir/test_ntsc.cc.i
+	cd /home/griffin/NTSC/gr-ntsc/build && $(MAKE) -f lib/CMakeFiles/test-ntsc.dir/build.make lib/CMakeFiles/test-ntsc.dir/test_ntsc.cc.i
 .PHONY : test_ntsc.cc.i
 
 test_ntsc.s: test_ntsc.cc.s
@@ -300,7 +300,7 @@ test_ntsc.s: test_ntsc.cc.s
 
 # target to generate assembly for a file
 test_ntsc.cc.s:
-	cd /home/griffin/Documents/gr-ntsc/build && $(MAKE) -f lib/CMakeFiles/test-ntsc.dir/build.make lib/CMakeFiles/test-ntsc.dir/test_ntsc.cc.s
+	cd /home/griffin/NTSC/gr-ntsc/build && $(MAKE) -f lib/CMakeFiles/test-ntsc.dir/build.make lib/CMakeFiles/test-ntsc.dir/test_ntsc.cc.s
 .PHONY : test_ntsc.cc.s
 
 # Help Target
@@ -341,6 +341,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/griffin/Documents/gr-ntsc/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/griffin/NTSC/gr-ntsc/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

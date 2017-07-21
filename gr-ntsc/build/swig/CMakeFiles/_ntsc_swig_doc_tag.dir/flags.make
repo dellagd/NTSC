@@ -6,5 +6,5 @@ CXX_FLAGS = -O3 -DNDEBUG   -fvisibility=hidden
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/griffin/Documents/gr-ntsc/lib -I/home/griffin/Documents/gr-ntsc/include -I/home/griffin/Documents/gr-ntsc/build/lib -I/home/griffin/Documents/gr-ntsc/build/include -I/home/griffin/gnuradio/include -I/home/griffin/Documents/gr-ntsc/build/swig -I/home/griffin/Documents/gr-ntsc/swig -I/home/griffin/gnuradio/include/gnuradio/swig -I/usr/include/python2.7 
+CXX_INCLUDES = -I/home/griffin/NTSC/gr-ntsc/lib -I/home/griffin/NTSC/gr-ntsc/include -I/home/griffin/NTSC/gr-ntsc/build/lib -I/home/griffin/NTSC/gr-ntsc/build/include -I/home/griffin/gnuradio/include -I/home/griffin/NTSC/gr-ntsc/build/swig -I/home/griffin/NTSC/gr-ntsc/swig -I/home/griffin/gnuradio/include/gnuradio/swig -I/usr/include/python2.7 
 

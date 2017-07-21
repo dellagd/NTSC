@@ -15,8 +15,8 @@
   </compound>
   <compound refid="encoder_8h" kind="file"><name>encoder.h</name>
   </compound>
-  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>/home/griffin/Documents/gr-ntsc/include</name>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>/home/griffin/NTSC/gr-ntsc/include</name>
   </compound>
-  <compound refid="dir_70c3a9d3aa823787ae0ce294ad57d362" kind="dir"><name>/home/griffin/Documents/gr-ntsc/include/ntsc</name>
+  <compound refid="dir_70c3a9d3aa823787ae0ce294ad57d362" kind="dir"><name>/home/griffin/NTSC/gr-ntsc/include/ntsc</name>
   </compound>
 </doxygenindex>

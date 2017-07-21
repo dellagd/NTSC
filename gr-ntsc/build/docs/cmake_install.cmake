@@ -1,4 +1,4 @@
-# Install script for directory: /home/griffin/Documents/gr-ntsc/docs
+# Install script for directory: /home/griffin/NTSC/gr-ntsc/docs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/griffin/Documents/gr-ntsc/build/docs/doxygen/cmake_install.cmake")
+  include("/home/griffin/NTSC/gr-ntsc/build/docs/doxygen/cmake_install.cmake")
 
 endif()
 

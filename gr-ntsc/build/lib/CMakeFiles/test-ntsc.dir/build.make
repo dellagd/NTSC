@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/griffin/Documents/gr-ntsc
+CMAKE_SOURCE_DIR = /home/griffin/NTSC/gr-ntsc
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/griffin/Documents/gr-ntsc/build
+CMAKE_BINARY_DIR = /home/griffin/NTSC/gr-ntsc/build
 
 # Include any dependencies generated for this target.
 include lib/CMakeFiles/test-ntsc.dir/depend.make
@@ -59,16 +59,16 @@ include lib/CMakeFiles/test-ntsc.dir/flags.make
 
 lib/CMakeFiles/test-ntsc.dir/test_ntsc.cc.o: lib/CMakeFiles/test-ntsc.dir/flags.make
 lib/CMakeFiles/test-ntsc.dir/test_ntsc.cc.o: ../lib/test_ntsc.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/griffin/Documents/gr-ntsc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/CMakeFiles/test-ntsc.dir/test_ntsc.cc.o"
-	cd /home/griffin/Documents/gr-ntsc/build/lib && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test-ntsc.dir/test_ntsc.cc.o -c /home/griffin/Documents/gr-ntsc/lib/test_ntsc.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/griffin/NTSC/gr-ntsc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/CMakeFiles/test-ntsc.dir/test_ntsc.cc.o"
+	cd /home/griffin/NTSC/gr-ntsc/build/lib && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test-ntsc.dir/test_ntsc.cc.o -c /home/griffin/NTSC/gr-ntsc/lib/test_ntsc.cc
 
 lib/CMakeFiles/test-ntsc.dir/test_ntsc.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test-ntsc.dir/test_ntsc.cc.i"
-	cd /home/griffin/Documents/gr-ntsc/build/lib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/griffin/Documents/gr-ntsc/lib/test_ntsc.cc > CMakeFiles/test-ntsc.dir/test_ntsc.cc.i
+	cd /home/griffin/NTSC/gr-ntsc/build/lib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/griffin/NTSC/gr-ntsc/lib/test_ntsc.cc > CMakeFiles/test-ntsc.dir/test_ntsc.cc.i
 
 lib/CMakeFiles/test-ntsc.dir/test_ntsc.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test-ntsc.dir/test_ntsc.cc.s"
-	cd /home/griffin/Documents/gr-ntsc/build/lib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/griffin/Documents/gr-ntsc/lib/test_ntsc.cc -o CMakeFiles/test-ntsc.dir/test_ntsc.cc.s
+	cd /home/griffin/NTSC/gr-ntsc/build/lib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/griffin/NTSC/gr-ntsc/lib/test_ntsc.cc -o CMakeFiles/test-ntsc.dir/test_ntsc.cc.s
 
 lib/CMakeFiles/test-ntsc.dir/test_ntsc.cc.o.requires:
 
@@ -83,16 +83,16 @@ lib/CMakeFiles/test-ntsc.dir/test_ntsc.cc.o.provides.build: lib/CMakeFiles/test-
 
 lib/CMakeFiles/test-ntsc.dir/qa_ntsc.cc.o: lib/CMakeFiles/test-ntsc.dir/flags.make
 lib/CMakeFiles/test-ntsc.dir/qa_ntsc.cc.o: ../lib/qa_ntsc.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/griffin/Documents/gr-ntsc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object lib/CMakeFiles/test-ntsc.dir/qa_ntsc.cc.o"
-	cd /home/griffin/Documents/gr-ntsc/build/lib && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test-ntsc.dir/qa_ntsc.cc.o -c /home/griffin/Documents/gr-ntsc/lib/qa_ntsc.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/griffin/NTSC/gr-ntsc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object lib/CMakeFiles/test-ntsc.dir/qa_ntsc.cc.o"
+	cd /home/griffin/NTSC/gr-ntsc/build/lib && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test-ntsc.dir/qa_ntsc.cc.o -c /home/griffin/NTSC/gr-ntsc/lib/qa_ntsc.cc
 
 lib/CMakeFiles/test-ntsc.dir/qa_ntsc.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test-ntsc.dir/qa_ntsc.cc.i"
-	cd /home/griffin/Documents/gr-ntsc/build/lib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/griffin/Documents/gr-ntsc/lib/qa_ntsc.cc > CMakeFiles/test-ntsc.dir/qa_ntsc.cc.i
+	cd /home/griffin/NTSC/gr-ntsc/build/lib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/griffin/NTSC/gr-ntsc/lib/qa_ntsc.cc > CMakeFiles/test-ntsc.dir/qa_ntsc.cc.i
 
 lib/CMakeFiles/test-ntsc.dir/qa_ntsc.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test-ntsc.dir/qa_ntsc.cc.s"
-	cd /home/griffin/Documents/gr-ntsc/build/lib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/griffin/Documents/gr-ntsc/lib/qa_ntsc.cc -o CMakeFiles/test-ntsc.dir/qa_ntsc.cc.s
+	cd /home/griffin/NTSC/gr-ntsc/build/lib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/griffin/NTSC/gr-ntsc/lib/qa_ntsc.cc -o CMakeFiles/test-ntsc.dir/qa_ntsc.cc.s
 
 lib/CMakeFiles/test-ntsc.dir/qa_ntsc.cc.o.requires:
 
@@ -156,8 +156,8 @@ lib/test-ntsc: /usr/local/lib/libopencv_viz.so.3.2.0
 lib/test-ntsc: /usr/local/lib/libopencv_core.so.3.2.0
 lib/test-ntsc: /usr/local/lib/libopencv_cudev.so.3.2.0
 lib/test-ntsc: lib/CMakeFiles/test-ntsc.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/griffin/Documents/gr-ntsc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable test-ntsc"
-	cd /home/griffin/Documents/gr-ntsc/build/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test-ntsc.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/griffin/NTSC/gr-ntsc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable test-ntsc"
+	cd /home/griffin/NTSC/gr-ntsc/build/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test-ntsc.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 lib/CMakeFiles/test-ntsc.dir/build: lib/test-ntsc
@@ -170,10 +170,10 @@ lib/CMakeFiles/test-ntsc.dir/requires: lib/CMakeFiles/test-ntsc.dir/qa_ntsc.cc.o
 .PHONY : lib/CMakeFiles/test-ntsc.dir/requires
 
 lib/CMakeFiles/test-ntsc.dir/clean:
-	cd /home/griffin/Documents/gr-ntsc/build/lib && $(CMAKE_COMMAND) -P CMakeFiles/test-ntsc.dir/cmake_clean.cmake
+	cd /home/griffin/NTSC/gr-ntsc/build/lib && $(CMAKE_COMMAND) -P CMakeFiles/test-ntsc.dir/cmake_clean.cmake
 .PHONY : lib/CMakeFiles/test-ntsc.dir/clean
 
 lib/CMakeFiles/test-ntsc.dir/depend:
-	cd /home/griffin/Documents/gr-ntsc/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/griffin/Documents/gr-ntsc /home/griffin/Documents/gr-ntsc/lib /home/griffin/Documents/gr-ntsc/build /home/griffin/Documents/gr-ntsc/build/lib /home/griffin/Documents/gr-ntsc/build/lib/CMakeFiles/test-ntsc.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/griffin/NTSC/gr-ntsc/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/griffin/NTSC/gr-ntsc /home/griffin/NTSC/gr-ntsc/lib /home/griffin/NTSC/gr-ntsc/build /home/griffin/NTSC/gr-ntsc/build/lib /home/griffin/NTSC/gr-ntsc/build/lib/CMakeFiles/test-ntsc.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/CMakeFiles/test-ntsc.dir/depend
 

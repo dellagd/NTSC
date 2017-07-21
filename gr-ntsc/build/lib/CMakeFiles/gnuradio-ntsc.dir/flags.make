@@ -6,5 +6,5 @@ CXX_FLAGS = -O3 -DNDEBUG -fPIC   -fvisibility=hidden
 
 CXX_DEFINES = -Dgnuradio_ntsc_EXPORTS
 
-CXX_INCLUDES = -I/home/griffin/Documents/gr-ntsc/lib -I/home/griffin/Documents/gr-ntsc/include -I/home/griffin/Documents/gr-ntsc/build/lib -I/home/griffin/Documents/gr-ntsc/build/include -I/home/griffin/gnuradio/include -isystem /usr/local/include -isystem /usr/local/include/opencv 
+CXX_INCLUDES = -I/home/griffin/NTSC/gr-ntsc/lib -I/home/griffin/NTSC/gr-ntsc/include -I/home/griffin/NTSC/gr-ntsc/build/lib -I/home/griffin/NTSC/gr-ntsc/build/include -I/home/griffin/gnuradio/include -isystem /usr/local/include -isystem /usr/local/include/opencv 
 

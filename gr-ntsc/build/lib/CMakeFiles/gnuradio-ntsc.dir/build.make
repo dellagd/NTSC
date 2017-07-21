@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/griffin/Documents/gr-ntsc
+CMAKE_SOURCE_DIR = /home/griffin/NTSC/gr-ntsc
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/griffin/Documents/gr-ntsc/build
+CMAKE_BINARY_DIR = /home/griffin/NTSC/gr-ntsc/build
 
 # Include any dependencies generated for this target.
 include lib/CMakeFiles/gnuradio-ntsc.dir/depend.make
@@ -59,16 +59,16 @@ include lib/CMakeFiles/gnuradio-ntsc.dir/flags.make
 
 lib/CMakeFiles/gnuradio-ntsc.dir/encntsc.cpp.o: lib/CMakeFiles/gnuradio-ntsc.dir/flags.make
 lib/CMakeFiles/gnuradio-ntsc.dir/encntsc.cpp.o: ../lib/encntsc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/griffin/Documents/gr-ntsc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/CMakeFiles/gnuradio-ntsc.dir/encntsc.cpp.o"
-	cd /home/griffin/Documents/gr-ntsc/build/lib && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gnuradio-ntsc.dir/encntsc.cpp.o -c /home/griffin/Documents/gr-ntsc/lib/encntsc.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/griffin/NTSC/gr-ntsc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/CMakeFiles/gnuradio-ntsc.dir/encntsc.cpp.o"
+	cd /home/griffin/NTSC/gr-ntsc/build/lib && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gnuradio-ntsc.dir/encntsc.cpp.o -c /home/griffin/NTSC/gr-ntsc/lib/encntsc.cpp
 
 lib/CMakeFiles/gnuradio-ntsc.dir/encntsc.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gnuradio-ntsc.dir/encntsc.cpp.i"
-	cd /home/griffin/Documents/gr-ntsc/build/lib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/griffin/Documents/gr-ntsc/lib/encntsc.cpp > CMakeFiles/gnuradio-ntsc.dir/encntsc.cpp.i
+	cd /home/griffin/NTSC/gr-ntsc/build/lib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/griffin/NTSC/gr-ntsc/lib/encntsc.cpp > CMakeFiles/gnuradio-ntsc.dir/encntsc.cpp.i
 
 lib/CMakeFiles/gnuradio-ntsc.dir/encntsc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gnuradio-ntsc.dir/encntsc.cpp.s"
-	cd /home/griffin/Documents/gr-ntsc/build/lib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/griffin/Documents/gr-ntsc/lib/encntsc.cpp -o CMakeFiles/gnuradio-ntsc.dir/encntsc.cpp.s
+	cd /home/griffin/NTSC/gr-ntsc/build/lib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/griffin/NTSC/gr-ntsc/lib/encntsc.cpp -o CMakeFiles/gnuradio-ntsc.dir/encntsc.cpp.s
 
 lib/CMakeFiles/gnuradio-ntsc.dir/encntsc.cpp.o.requires:
 
@@ -83,16 +83,16 @@ lib/CMakeFiles/gnuradio-ntsc.dir/encntsc.cpp.o.provides.build: lib/CMakeFiles/gn
 
 lib/CMakeFiles/gnuradio-ntsc.dir/encoder_impl.cc.o: lib/CMakeFiles/gnuradio-ntsc.dir/flags.make
 lib/CMakeFiles/gnuradio-ntsc.dir/encoder_impl.cc.o: ../lib/encoder_impl.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/griffin/Documents/gr-ntsc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object lib/CMakeFiles/gnuradio-ntsc.dir/encoder_impl.cc.o"
-	cd /home/griffin/Documents/gr-ntsc/build/lib && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gnuradio-ntsc.dir/encoder_impl.cc.o -c /home/griffin/Documents/gr-ntsc/lib/encoder_impl.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/griffin/NTSC/gr-ntsc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object lib/CMakeFiles/gnuradio-ntsc.dir/encoder_impl.cc.o"
+	cd /home/griffin/NTSC/gr-ntsc/build/lib && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gnuradio-ntsc.dir/encoder_impl.cc.o -c /home/griffin/NTSC/gr-ntsc/lib/encoder_impl.cc
 
 lib/CMakeFiles/gnuradio-ntsc.dir/encoder_impl.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gnuradio-ntsc.dir/encoder_impl.cc.i"
-	cd /home/griffin/Documents/gr-ntsc/build/lib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/griffin/Documents/gr-ntsc/lib/encoder_impl.cc > CMakeFiles/gnuradio-ntsc.dir/encoder_impl.cc.i
+	cd /home/griffin/NTSC/gr-ntsc/build/lib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/griffin/NTSC/gr-ntsc/lib/encoder_impl.cc > CMakeFiles/gnuradio-ntsc.dir/encoder_impl.cc.i
 
 lib/CMakeFiles/gnuradio-ntsc.dir/encoder_impl.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gnuradio-ntsc.dir/encoder_impl.cc.s"
-	cd /home/griffin/Documents/gr-ntsc/build/lib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/griffin/Documents/gr-ntsc/lib/encoder_impl.cc -o CMakeFiles/gnuradio-ntsc.dir/encoder_impl.cc.s
+	cd /home/griffin/NTSC/gr-ntsc/build/lib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/griffin/NTSC/gr-ntsc/lib/encoder_impl.cc -o CMakeFiles/gnuradio-ntsc.dir/encoder_impl.cc.s
 
 lib/CMakeFiles/gnuradio-ntsc.dir/encoder_impl.cc.o.requires:
 
@@ -150,12 +150,12 @@ lib/libgnuradio-ntsc-1.0.0git.so.0.0.0: /usr/local/lib/libopencv_imgproc.so.3.2.
 lib/libgnuradio-ntsc-1.0.0git.so.0.0.0: /usr/local/lib/libopencv_core.so.3.2.0
 lib/libgnuradio-ntsc-1.0.0git.so.0.0.0: /usr/local/lib/libopencv_cudev.so.3.2.0
 lib/libgnuradio-ntsc-1.0.0git.so.0.0.0: lib/CMakeFiles/gnuradio-ntsc.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/griffin/Documents/gr-ntsc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libgnuradio-ntsc-1.0.0git.so"
-	cd /home/griffin/Documents/gr-ntsc/build/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gnuradio-ntsc.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/griffin/Documents/gr-ntsc/build/lib && $(CMAKE_COMMAND) -E cmake_symlink_library libgnuradio-ntsc-1.0.0git.so.0.0.0 libgnuradio-ntsc-1.0.0git.so.0.0.0 libgnuradio-ntsc-1.0.0git.so
-	cd /home/griffin/Documents/gr-ntsc/build/lib && /usr/bin/cmake -E create_symlink libgnuradio-ntsc-1.0.0git.so.0.0.0 /home/griffin/Documents/gr-ntsc/build/lib/libgnuradio-ntsc.so
-	cd /home/griffin/Documents/gr-ntsc/build/lib && /usr/bin/cmake -E create_symlink libgnuradio-ntsc-1.0.0git.so.0.0.0 /home/griffin/Documents/gr-ntsc/build/lib/libgnuradio-ntsc-1.0.0git.so.0
-	cd /home/griffin/Documents/gr-ntsc/build/lib && /usr/bin/cmake -E touch libgnuradio-ntsc-1.0.0git.so.0.0.0
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/griffin/NTSC/gr-ntsc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libgnuradio-ntsc-1.0.0git.so"
+	cd /home/griffin/NTSC/gr-ntsc/build/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gnuradio-ntsc.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/griffin/NTSC/gr-ntsc/build/lib && $(CMAKE_COMMAND) -E cmake_symlink_library libgnuradio-ntsc-1.0.0git.so.0.0.0 libgnuradio-ntsc-1.0.0git.so.0.0.0 libgnuradio-ntsc-1.0.0git.so
+	cd /home/griffin/NTSC/gr-ntsc/build/lib && /usr/bin/cmake -E create_symlink libgnuradio-ntsc-1.0.0git.so.0.0.0 /home/griffin/NTSC/gr-ntsc/build/lib/libgnuradio-ntsc.so
+	cd /home/griffin/NTSC/gr-ntsc/build/lib && /usr/bin/cmake -E create_symlink libgnuradio-ntsc-1.0.0git.so.0.0.0 /home/griffin/NTSC/gr-ntsc/build/lib/libgnuradio-ntsc-1.0.0git.so.0
+	cd /home/griffin/NTSC/gr-ntsc/build/lib && /usr/bin/cmake -E touch libgnuradio-ntsc-1.0.0git.so.0.0.0
 
 lib/libgnuradio-ntsc-1.0.0git.so: lib/libgnuradio-ntsc-1.0.0git.so.0.0.0
 	@$(CMAKE_COMMAND) -E touch_nocreate lib/libgnuradio-ntsc-1.0.0git.so
@@ -171,10 +171,10 @@ lib/CMakeFiles/gnuradio-ntsc.dir/requires: lib/CMakeFiles/gnuradio-ntsc.dir/enco
 .PHONY : lib/CMakeFiles/gnuradio-ntsc.dir/requires
 
 lib/CMakeFiles/gnuradio-ntsc.dir/clean:
-	cd /home/griffin/Documents/gr-ntsc/build/lib && $(CMAKE_COMMAND) -P CMakeFiles/gnuradio-ntsc.dir/cmake_clean.cmake
+	cd /home/griffin/NTSC/gr-ntsc/build/lib && $(CMAKE_COMMAND) -P CMakeFiles/gnuradio-ntsc.dir/cmake_clean.cmake
 .PHONY : lib/CMakeFiles/gnuradio-ntsc.dir/clean
 
 lib/CMakeFiles/gnuradio-ntsc.dir/depend:
-	cd /home/griffin/Documents/gr-ntsc/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/griffin/Documents/gr-ntsc /home/griffin/Documents/gr-ntsc/lib /home/griffin/Documents/gr-ntsc/build /home/griffin/Documents/gr-ntsc/build/lib /home/griffin/Documents/gr-ntsc/build/lib/CMakeFiles/gnuradio-ntsc.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/griffin/NTSC/gr-ntsc/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/griffin/NTSC/gr-ntsc /home/griffin/NTSC/gr-ntsc/lib /home/griffin/NTSC/gr-ntsc/build /home/griffin/NTSC/gr-ntsc/build/lib /home/griffin/NTSC/gr-ntsc/build/lib/CMakeFiles/gnuradio-ntsc.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/CMakeFiles/gnuradio-ntsc.dir/depend
 

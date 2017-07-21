@@ -3,28 +3,28 @@
   <compounddef id="api_8h" kind="file" language="C++">
     <compoundname>api.h</compoundname>
     <includes local="no">gnuradio/attributes.h</includes>
-    <includedby refid="encoder_8h" local="no">/home/griffin/Documents/gr-ntsc/include/ntsc/encoder.h</includedby>
+    <includedby refid="encoder_8h" local="no">/home/griffin/NTSC/gr-ntsc/include/ntsc/encoder.h</includedby>
     <incdepgraph>
       <node id="1">
         <label>gnuradio/attributes.h</label>
       </node>
       <node id="0">
-        <label>/home/griffin/Documents/gr-ntsc/include/ntsc/api.h</label>
+        <label>/home/griffin/NTSC/gr-ntsc/include/ntsc/api.h</label>
         <link refid="api.h"/>
         <childnode refid="1" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="3">
-        <label>/home/griffin/Documents/gr-ntsc/include/ntsc/encoder.h</label>
-        <link refid="encoder_8h"/>
-      </node>
       <node id="2">
-        <label>/home/griffin/Documents/gr-ntsc/include/ntsc/api.h</label>
+        <label>/home/griffin/NTSC/gr-ntsc/include/ntsc/api.h</label>
         <link refid="api.h"/>
         <childnode refid="3" relation="include">
         </childnode>
+      </node>
+      <node id="3">
+        <label>/home/griffin/NTSC/gr-ntsc/include/ntsc/encoder.h</label>
+        <link refid="encoder_8h"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="define">
@@ -37,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/griffin/Documents/gr-ntsc/include/ntsc/api.h" line="30" column="12" bodyfile="/home/griffin/Documents/gr-ntsc/include/ntsc/api.h" bodystart="30" bodyend="-1"/>
+        <location file="/home/griffin/NTSC/gr-ntsc/include/ntsc/api.h" line="30" column="12" bodyfile="/home/griffin/NTSC/gr-ntsc/include/ntsc/api.h" bodystart="30" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -79,6 +79,6 @@
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>INCLUDED_NTSC_API_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
-    <location file="/home/griffin/Documents/gr-ntsc/include/ntsc/api.h"/>
+    <location file="/home/griffin/NTSC/gr-ntsc/include/ntsc/api.h"/>
   </compounddef>
 </doxygen>

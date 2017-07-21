@@ -7,6 +7,15 @@
     <includes local="yes">opencv2/imgproc/imgproc.hpp</includes>
     <includedby refid="encoder__impl_8h" local="yes">encoder_impl.h</includedby>
     <incdepgraph>
+      <node id="39">
+        <label>opencv2/imgproc/imgproc.hpp</label>
+      </node>
+      <node id="37">
+        <label>opencv2/core.hpp</label>
+      </node>
+      <node id="38">
+        <label>opencv2/highgui.hpp</label>
+      </node>
       <node id="36">
         <label>encntsc.h</label>
         <link refid="encntsc.h"/>
@@ -16,15 +25,6 @@
         </childnode>
         <childnode refid="39" relation="include">
         </childnode>
-      </node>
-      <node id="39">
-        <label>opencv2/imgproc/imgproc.hpp</label>
-      </node>
-      <node id="37">
-        <label>opencv2/core.hpp</label>
-      </node>
-      <node id="38">
-        <label>opencv2/highgui.hpp</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/griffin/Documents/gr-ntsc/lib/encntsc.h" line="22" column="1"/>
+        <location file="/home/griffin/NTSC/gr-ntsc/lib/encntsc.h" line="21" column="1"/>
       </memberdef>
       <memberdef kind="function" id="encntsc_8h_1a54470e7f9263df3d93ab2fc7cf8486e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structframe" kindref="compound">frame</ref></type>
@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/griffin/Documents/gr-ntsc/lib/encntsc.h" line="23" column="1"/>
+        <location file="/home/griffin/NTSC/gr-ntsc/lib/encntsc.h" line="22" column="1"/>
       </memberdef>
       <memberdef kind="function" id="encntsc_8h_1a2df191cc36768bd44824aab78d1fe0cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structframe" kindref="compound">frame</ref></type>
@@ -83,13 +83,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/griffin/Documents/gr-ntsc/lib/encntsc.h" line="24" column="1"/>
+        <location file="/home/griffin/NTSC/gr-ntsc/lib/encntsc.h" line="23" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="encntsc_8h_1a5fecf2f4fec929098aee2b2a9782956f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="encntsc_8h_1a1f61d8cc240d4e54602a1c8c2302085f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structNTSCEncoder" kindref="compound">NTSCEncoder</ref></type>
-        <definition>NTSCEncoder new_ntscencoder</definition>
+        <definition>NTSCEncoder new_ntscencoder_file</definition>
         <argsstring>(char *filename)</argsstring>
-        <name>new_ntscencoder</name>
+        <name>new_ntscencoder_file</name>
         <param>
           <type>char *</type>
           <declname>filename</declname>
@@ -100,7 +100,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/griffin/Documents/gr-ntsc/lib/encntsc.h" line="25" column="1"/>
+        <location file="/home/griffin/NTSC/gr-ntsc/lib/encntsc.h" line="24" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="encntsc_8h_1a4fa65ed9fe1e249609e7d71f64181f28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structNTSCEncoder" kindref="compound">NTSCEncoder</ref></type>
+        <definition>NTSCEncoder new_ntscencoder_cam</definition>
+        <argsstring>(size_t camera_num)</argsstring>
+        <name>new_ntscencoder_cam</name>
+        <param>
+          <type>size_t</type>
+          <declname>camera_num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/griffin/NTSC/gr-ntsc/lib/encntsc.h" line="25" column="1"/>
       </memberdef>
       <memberdef kind="function" id="encntsc_8h_1ad3222801365673ea2607cac913ba1bc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -125,13 +142,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/griffin/Documents/gr-ntsc/lib/encntsc.h" line="26" column="1"/>
+        <location file="/home/griffin/NTSC/gr-ntsc/lib/encntsc.h" line="26" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/griffin/Documents/gr-ntsc/lib/encntsc.h"/>
+    <location file="/home/griffin/NTSC/gr-ntsc/lib/encntsc.h"/>
   </compounddef>
 </doxygen>

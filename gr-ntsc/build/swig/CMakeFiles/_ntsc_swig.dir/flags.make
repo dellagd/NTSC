@@ -6,7 +6,7 @@ CXX_FLAGS = -O3 -DNDEBUG -fPIC   -fvisibility=hidden
 
 CXX_DEFINES = -D_ntsc_swig_EXPORTS
 
-CXX_INCLUDES = -I/home/griffin/Documents/gr-ntsc/lib -I/home/griffin/Documents/gr-ntsc/include -I/home/griffin/Documents/gr-ntsc/build/lib -I/home/griffin/Documents/gr-ntsc/build/include -I/home/griffin/gnuradio/include -I/home/griffin/Documents/gr-ntsc/build/swig -I/home/griffin/Documents/gr-ntsc/swig -I/home/griffin/gnuradio/include/gnuradio/swig -I/usr/include/python2.7 -isystem /usr/local/include -isystem /usr/local/include/opencv 
+CXX_INCLUDES = -I/home/griffin/NTSC/gr-ntsc/lib -I/home/griffin/NTSC/gr-ntsc/include -I/home/griffin/NTSC/gr-ntsc/build/lib -I/home/griffin/NTSC/gr-ntsc/build/include -I/home/griffin/gnuradio/include -I/home/griffin/NTSC/gr-ntsc/build/swig -I/home/griffin/NTSC/gr-ntsc/swig -I/home/griffin/gnuradio/include/gnuradio/swig -I/usr/include/python2.7 -isystem /usr/local/include -isystem /usr/local/include/opencv 
 
 # Custom flags: swig/CMakeFiles/_ntsc_swig.dir/ntsc_swigPYTHON_wrap.cxx.o_FLAGS = -Wno-unused-but-set-variable
 

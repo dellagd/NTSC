@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/griffin/Documents/gr-ntsc/lib/encoder_impl.h" line="33" column="1" bodyfile="/home/griffin/Documents/gr-ntsc/lib/encoder_impl.h" bodystart="33" bodyend="-1"/>
+        <location file="/home/griffin/NTSC/gr-ntsc/lib/encoder_impl.h" line="33" column="1" bodyfile="/home/griffin/NTSC/gr-ntsc/lib/encoder_impl.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1ntsc_1_1encoder__impl_1a4b23fee84aa1f2d84760aaa1bc922ad0" prot="private" static="no" mutable="no">
         <type><ref refid="structframe" kindref="compound">frame</ref></type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/griffin/Documents/gr-ntsc/lib/encoder_impl.h" line="34" column="1" bodyfile="/home/griffin/Documents/gr-ntsc/lib/encoder_impl.h" bodystart="34" bodyend="-1"/>
+        <location file="/home/griffin/NTSC/gr-ntsc/lib/encoder_impl.h" line="34" column="1" bodyfile="/home/griffin/NTSC/gr-ntsc/lib/encoder_impl.h" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1ntsc_1_1encoder__impl_1ab0e5cd74fb2f844f88ccddaf641ab419" prot="private" static="no" mutable="no">
         <type><ref refid="structframe" kindref="compound">frame</ref></type>
@@ -42,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/griffin/Documents/gr-ntsc/lib/encoder_impl.h" line="35" column="1" bodyfile="/home/griffin/Documents/gr-ntsc/lib/encoder_impl.h" bodystart="35" bodyend="-1"/>
+        <location file="/home/griffin/NTSC/gr-ntsc/lib/encoder_impl.h" line="35" column="1" bodyfile="/home/griffin/NTSC/gr-ntsc/lib/encoder_impl.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1ntsc_1_1encoder__impl_1ad471a0e39de497c8f57dcfaab6666528" prot="private" static="no" mutable="no">
         <type>const char *</type>
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/griffin/Documents/gr-ntsc/lib/encoder_impl.h" line="36" column="1" bodyfile="/home/griffin/Documents/gr-ntsc/lib/encoder_impl.h" bodystart="36" bodyend="-1"/>
+        <location file="/home/griffin/NTSC/gr-ntsc/lib/encoder_impl.h" line="36" column="1" bodyfile="/home/griffin/NTSC/gr-ntsc/lib/encoder_impl.h" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1ntsc_1_1encoder__impl_1ad0d1f1a9e35c70ba38d70886f900990a" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/griffin/Documents/gr-ntsc/lib/encoder_impl.h" line="37" column="1" bodyfile="/home/griffin/Documents/gr-ntsc/lib/encoder_impl.h" bodystart="37" bodyend="-1"/>
+        <location file="/home/griffin/NTSC/gr-ntsc/lib/encoder_impl.h" line="37" column="1" bodyfile="/home/griffin/NTSC/gr-ntsc/lib/encoder_impl.h" bodystart="37" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classgr_1_1ntsc_1_1encoder__impl_1a52b1f03dec91928c368f40c562e2071d" prot="private" static="no" mutable="no">
         <type>size_t</type>
@@ -81,7 +81,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/griffin/Documents/gr-ntsc/lib/encoder_impl.h" line="38" column="1" bodyfile="/home/griffin/Documents/gr-ntsc/lib/encoder_impl.h" bodystart="38" bodyend="-1"/>
+        <location file="/home/griffin/NTSC/gr-ntsc/lib/encoder_impl.h" line="38" column="1" bodyfile="/home/griffin/NTSC/gr-ntsc/lib/encoder_impl.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1ntsc_1_1encoder__impl_1ac3daf6f499460125570b74bb593baf1a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr::ntsc::encoder_impl::p_use_webcam</definition>
+        <argsstring></argsstring>
+        <name>p_use_webcam</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/griffin/NTSC/gr-ntsc/lib/encoder_impl.h" line="39" column="1" bodyfile="/home/griffin/NTSC/gr-ntsc/lib/encoder_impl.h" bodystart="39" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -108,7 +121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/griffin/Documents/gr-ntsc/lib/encoder_impl.h" line="41" column="1"/>
+        <location file="/home/griffin/NTSC/gr-ntsc/lib/encoder_impl.h" line="42" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1ntsc_1_1encoder__impl_1aa9ac98dc09609cf9838b038291ec19d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -121,7 +134,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/griffin/Documents/gr-ntsc/lib/encoder_impl.h" line="42" column="1"/>
+        <location file="/home/griffin/NTSC/gr-ntsc/lib/encoder_impl.h" line="43" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1ntsc_1_1encoder__impl_1a160fde3bac700091848d9d165ce3c386" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -146,7 +159,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/griffin/Documents/gr-ntsc/lib/encoder_impl.h" line="45" column="1"/>
+        <location file="/home/griffin/NTSC/gr-ntsc/lib/encoder_impl.h" line="46" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -187,7 +200,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/griffin/Documents/gr-ntsc/lib/encoder_impl.h" line="31" column="1" bodyfile="/home/griffin/Documents/gr-ntsc/lib/encoder_impl.h" bodystart="30" bodyend="48"/>
+    <location file="/home/griffin/NTSC/gr-ntsc/lib/encoder_impl.h" line="31" column="1" bodyfile="/home/griffin/NTSC/gr-ntsc/lib/encoder_impl.h" bodystart="30" bodyend="49"/>
     <listofallmembers>
       <member refid="classgr_1_1ntsc_1_1encoder__impl_1a389cd7cf4003e2a0e6b470d64727da1d" prot="public" virt="non-virtual"><scope>gr::ntsc::encoder_impl</scope><name>encoder_impl</name></member>
       <member refid="classgr_1_1ntsc_1_1encoder_1a637f8c527c213f2ebd8e20c044ef70d4" prot="public" virt="non-virtual"><scope>gr::ntsc::encoder_impl</scope><name>make</name></member>
@@ -196,6 +209,7 @@
       <member refid="classgr_1_1ntsc_1_1encoder__impl_1ad471a0e39de497c8f57dcfaab6666528" prot="private" virt="non-virtual"><scope>gr::ntsc::encoder_impl</scope><name>p_filepath</name></member>
       <member refid="classgr_1_1ntsc_1_1encoder__impl_1a4b23fee84aa1f2d84760aaa1bc922ad0" prot="private" virt="non-virtual"><scope>gr::ntsc::encoder_impl</scope><name>p_ref_frame</name></member>
       <member refid="classgr_1_1ntsc_1_1encoder__impl_1a52b1f03dec91928c368f40c562e2071d" prot="private" virt="non-virtual"><scope>gr::ntsc::encoder_impl</scope><name>p_repeat</name></member>
+      <member refid="classgr_1_1ntsc_1_1encoder__impl_1ac3daf6f499460125570b74bb593baf1a" prot="private" virt="non-virtual"><scope>gr::ntsc::encoder_impl</scope><name>p_use_webcam</name></member>
       <member refid="classgr_1_1ntsc_1_1encoder__impl_1ab0e5cd74fb2f844f88ccddaf641ab419" prot="private" virt="non-virtual"><scope>gr::ntsc::encoder_impl</scope><name>p_vid_frame</name></member>
       <member refid="classgr_1_1ntsc_1_1encoder_1ab783319217cf325fc076869680fc265e" prot="public" virt="non-virtual"><scope>gr::ntsc::encoder_impl</scope><name>sptr</name></member>
       <member refid="classgr_1_1ntsc_1_1encoder__impl_1a160fde3bac700091848d9d165ce3c386" prot="public" virt="non-virtual"><scope>gr::ntsc::encoder_impl</scope><name>work</name></member>

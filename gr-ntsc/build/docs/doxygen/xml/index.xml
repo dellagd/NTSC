@@ -11,6 +11,7 @@
     <member refid="classgr_1_1ntsc_1_1encoder__impl_1ad471a0e39de497c8f57dcfaab6666528" kind="variable"><name>p_filepath</name></member>
     <member refid="classgr_1_1ntsc_1_1encoder__impl_1ad0d1f1a9e35c70ba38d70886f900990a" kind="variable"><name>p_decim</name></member>
     <member refid="classgr_1_1ntsc_1_1encoder__impl_1a52b1f03dec91928c368f40c562e2071d" kind="variable"><name>p_repeat</name></member>
+    <member refid="classgr_1_1ntsc_1_1encoder__impl_1ac3daf6f499460125570b74bb593baf1a" kind="variable"><name>p_use_webcam</name></member>
     <member refid="classgr_1_1ntsc_1_1encoder__impl_1a389cd7cf4003e2a0e6b470d64727da1d" kind="function"><name>encoder_impl</name></member>
     <member refid="classgr_1_1ntsc_1_1encoder__impl_1aa9ac98dc09609cf9838b038291ec19d4" kind="function"><name>~encoder_impl</name></member>
     <member refid="classgr_1_1ntsc_1_1encoder__impl_1a160fde3bac700091848d9d165ce3c386" kind="function"><name>work</name></member>
@@ -39,7 +40,8 @@
     <member refid="encntsc_8h_1aafafbfe4d83a32f448bd131a94c30bf3" kind="function"><name>free_frame</name></member>
     <member refid="encntsc_8h_1a54470e7f9263df3d93ab2fc7cf8486e6" kind="function"><name>new_frame</name></member>
     <member refid="encntsc_8h_1a2df191cc36768bd44824aab78d1fe0cb" kind="function"><name>get_reference_frame</name></member>
-    <member refid="encntsc_8h_1a5fecf2f4fec929098aee2b2a9782956f" kind="function"><name>new_ntscencoder</name></member>
+    <member refid="encntsc_8h_1a1f61d8cc240d4e54602a1c8c2302085f" kind="function"><name>new_ntscencoder_file</name></member>
+    <member refid="encntsc_8h_1a4fa65ed9fe1e249609e7d71f64181f28" kind="function"><name>new_ntscencoder_cam</name></member>
     <member refid="encntsc_8h_1ad3222801365673ea2607cac913ba1bc0" kind="function"><name>get_frame</name></member>
   </compound>
   <compound refid="encoder_8h" kind="file"><name>encoder.h</name>

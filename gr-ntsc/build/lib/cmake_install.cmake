@@ -1,4 +1,4 @@
-# Install script for directory: /home/griffin/Documents/gr-ntsc/lib
+# Install script for directory: /home/griffin/NTSC/gr-ntsc/lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,8 +45,8 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "ntsc_ru
     endif()
   endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/home/griffin/Documents/gr-ntsc/build/lib/libgnuradio-ntsc-1.0.0git.so.0.0.0"
-    "/home/griffin/Documents/gr-ntsc/build/lib/libgnuradio-ntsc-1.0.0git.so"
+    "/home/griffin/NTSC/gr-ntsc/build/lib/libgnuradio-ntsc-1.0.0git.so.0.0.0"
+    "/home/griffin/NTSC/gr-ntsc/build/lib/libgnuradio-ntsc-1.0.0git.so"
     )
   foreach(file
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libgnuradio-ntsc-1.0.0git.so.0.0.0"
@@ -67,8 +67,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "ntsc_runtime")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE FILE FILES
-    "/home/griffin/Documents/gr-ntsc/build/lib/libgnuradio-ntsc.so"
-    "/home/griffin/Documents/gr-ntsc/build/lib/libgnuradio-ntsc-1.0.0git.so.0"
+    "/home/griffin/NTSC/gr-ntsc/build/lib/libgnuradio-ntsc.so"
+    "/home/griffin/NTSC/gr-ntsc/build/lib/libgnuradio-ntsc-1.0.0git.so.0"
     )
 endif()
 

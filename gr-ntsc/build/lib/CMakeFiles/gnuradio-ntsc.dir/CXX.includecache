@@ -16,7 +16,7 @@ ntsc/api.h
 gnuradio/sync_block.h
 -
 
-/home/griffin/Documents/gr-ntsc/lib/encntsc.cpp
+/home/griffin/NTSC/gr-ntsc/lib/encntsc.cpp
 sys/time.h
 -
 stdio.h
@@ -28,29 +28,29 @@ unistd.h
 iostream
 -
 encntsc.h
-/home/griffin/Documents/gr-ntsc/lib/encntsc.h
+/home/griffin/NTSC/gr-ntsc/lib/encntsc.h
 
-/home/griffin/Documents/gr-ntsc/lib/encntsc.h
+/home/griffin/NTSC/gr-ntsc/lib/encntsc.h
 opencv2/core.hpp
-/home/griffin/Documents/gr-ntsc/lib/opencv2/core.hpp
+/home/griffin/NTSC/gr-ntsc/lib/opencv2/core.hpp
 opencv2/highgui.hpp
-/home/griffin/Documents/gr-ntsc/lib/opencv2/highgui.hpp
+/home/griffin/NTSC/gr-ntsc/lib/opencv2/highgui.hpp
 opencv2/imgproc/imgproc.hpp
-/home/griffin/Documents/gr-ntsc/lib/opencv2/imgproc/imgproc.hpp
+/home/griffin/NTSC/gr-ntsc/lib/opencv2/imgproc/imgproc.hpp
 
-/home/griffin/Documents/gr-ntsc/lib/encoder_impl.cc
+/home/griffin/NTSC/gr-ntsc/lib/encoder_impl.cc
 config.h
-/home/griffin/Documents/gr-ntsc/lib/config.h
+/home/griffin/NTSC/gr-ntsc/lib/config.h
 gnuradio/io_signature.h
 -
 encoder_impl.h
-/home/griffin/Documents/gr-ntsc/lib/encoder_impl.h
+/home/griffin/NTSC/gr-ntsc/lib/encoder_impl.h
 
-/home/griffin/Documents/gr-ntsc/lib/encoder_impl.h
+/home/griffin/NTSC/gr-ntsc/lib/encoder_impl.h
 ntsc/encoder.h
 -
 encntsc.h
-/home/griffin/Documents/gr-ntsc/lib/encntsc.h
+/home/griffin/NTSC/gr-ntsc/lib/encntsc.h
 
 /home/griffin/gnuradio/include/gnuradio/api.h
 gnuradio/attributes.h

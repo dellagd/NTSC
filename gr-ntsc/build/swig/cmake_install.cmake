@@ -1,4 +1,4 @@
-# Install script for directory: /home/griffin/Documents/gr-ntsc/swig
+# Install script for directory: /home/griffin/NTSC/gr-ntsc/swig
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,12 +39,12 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/ntsc/_ntsc_swig.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/ntsc" TYPE MODULE FILES "/home/griffin/Documents/gr-ntsc/build/swig/_ntsc_swig.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/ntsc" TYPE MODULE FILES "/home/griffin/NTSC/gr-ntsc/build/swig/_ntsc_swig.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/ntsc/_ntsc_swig.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/ntsc/_ntsc_swig.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/ntsc/_ntsc_swig.so"
-         OLD_RPATH "/home/griffin/Documents/gr-ntsc/build/lib:/usr/local/lib:"
+         OLD_RPATH "/home/griffin/NTSC/gr-ntsc/build/lib:/usr/local/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/ntsc/_ntsc_swig.so")
@@ -53,20 +53,20 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/ntsc" TYPE FILE FILES "/home/griffin/Documents/gr-ntsc/build/swig/ntsc_swig.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/ntsc" TYPE FILE FILES "/home/griffin/NTSC/gr-ntsc/build/swig/ntsc_swig.py")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/ntsc" TYPE FILE FILES
-    "/home/griffin/Documents/gr-ntsc/build/swig/ntsc_swig.pyc"
-    "/home/griffin/Documents/gr-ntsc/build/swig/ntsc_swig.pyo"
+    "/home/griffin/NTSC/gr-ntsc/build/swig/ntsc_swig.pyc"
+    "/home/griffin/NTSC/gr-ntsc/build/swig/ntsc_swig.pyo"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/ntsc/ntsc/swig" TYPE FILE FILES
-    "/home/griffin/Documents/gr-ntsc/swig/ntsc_swig.i"
-    "/home/griffin/Documents/gr-ntsc/build/swig/ntsc_swig_doc.i"
+    "/home/griffin/NTSC/gr-ntsc/swig/ntsc_swig.i"
+    "/home/griffin/NTSC/gr-ntsc/build/swig/ntsc_swig_doc.i"
     )
 endif()
 

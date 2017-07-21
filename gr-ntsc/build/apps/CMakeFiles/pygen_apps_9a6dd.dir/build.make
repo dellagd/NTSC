@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/griffin/Documents/gr-ntsc
+CMAKE_SOURCE_DIR = /home/griffin/NTSC/gr-ntsc
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/griffin/Documents/gr-ntsc/build
+CMAKE_BINARY_DIR = /home/griffin/NTSC/gr-ntsc/build
 
 # Utility rule file for pygen_apps_9a6dd.
 
@@ -63,10 +63,10 @@ apps/CMakeFiles/pygen_apps_9a6dd.dir/build: pygen_apps_9a6dd
 .PHONY : apps/CMakeFiles/pygen_apps_9a6dd.dir/build
 
 apps/CMakeFiles/pygen_apps_9a6dd.dir/clean:
-	cd /home/griffin/Documents/gr-ntsc/build/apps && $(CMAKE_COMMAND) -P CMakeFiles/pygen_apps_9a6dd.dir/cmake_clean.cmake
+	cd /home/griffin/NTSC/gr-ntsc/build/apps && $(CMAKE_COMMAND) -P CMakeFiles/pygen_apps_9a6dd.dir/cmake_clean.cmake
 .PHONY : apps/CMakeFiles/pygen_apps_9a6dd.dir/clean
 
 apps/CMakeFiles/pygen_apps_9a6dd.dir/depend:
-	cd /home/griffin/Documents/gr-ntsc/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/griffin/Documents/gr-ntsc /home/griffin/Documents/gr-ntsc/apps /home/griffin/Documents/gr-ntsc/build /home/griffin/Documents/gr-ntsc/build/apps /home/griffin/Documents/gr-ntsc/build/apps/CMakeFiles/pygen_apps_9a6dd.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/griffin/NTSC/gr-ntsc/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/griffin/NTSC/gr-ntsc /home/griffin/NTSC/gr-ntsc/apps /home/griffin/NTSC/gr-ntsc/build /home/griffin/NTSC/gr-ntsc/build/apps /home/griffin/NTSC/gr-ntsc/build/apps/CMakeFiles/pygen_apps_9a6dd.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : apps/CMakeFiles/pygen_apps_9a6dd.dir/depend
 

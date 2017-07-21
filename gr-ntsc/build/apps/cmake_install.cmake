@@ -1,4 +1,4 @@
-# Install script for directory: /home/griffin/Documents/gr-ntsc/apps
+# Install script for directory: /home/griffin/NTSC/gr-ntsc/apps
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

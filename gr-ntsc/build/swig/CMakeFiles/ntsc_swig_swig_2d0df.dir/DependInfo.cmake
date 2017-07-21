@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/griffin/Documents/gr-ntsc/build/swig/ntsc_swig_swig_2d0df.cpp" "/home/griffin/Documents/gr-ntsc/build/swig/CMakeFiles/ntsc_swig_swig_2d0df.dir/ntsc_swig_swig_2d0df.cpp.o"
+  "/home/griffin/NTSC/gr-ntsc/build/swig/ntsc_swig_swig_2d0df.cpp" "/home/griffin/NTSC/gr-ntsc/build/swig/CMakeFiles/ntsc_swig_swig_2d0df.dir/ntsc_swig_swig_2d0df.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

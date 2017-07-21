@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/griffin/Documents/gr-ntsc/lib/encntsc.h" line="16" column="1" bodyfile="/home/griffin/Documents/gr-ntsc/lib/encntsc.h" bodystart="16" bodyend="-1"/>
+        <location file="/home/griffin/NTSC/gr-ntsc/lib/encntsc.h" line="16" column="1" bodyfile="/home/griffin/NTSC/gr-ntsc/lib/encntsc.h" bodystart="16" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structNTSCEncoder_1add8da2e8b22e1be15e5e15f05fc6ebcb" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/griffin/Documents/gr-ntsc/lib/encntsc.h" line="17" column="1" bodyfile="/home/griffin/Documents/gr-ntsc/lib/encntsc.h" bodystart="17" bodyend="-1"/>
+        <location file="/home/griffin/NTSC/gr-ntsc/lib/encntsc.h" line="17" column="1" bodyfile="/home/griffin/NTSC/gr-ntsc/lib/encntsc.h" bodystart="17" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structNTSCEncoder_1af891422010795b406efdefd2249581b8" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -41,14 +41,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/griffin/Documents/gr-ntsc/lib/encntsc.h" line="18" column="1" bodyfile="/home/griffin/Documents/gr-ntsc/lib/encntsc.h" bodystart="18" bodyend="-1"/>
+        <location file="/home/griffin/NTSC/gr-ntsc/lib/encntsc.h" line="18" column="1" bodyfile="/home/griffin/NTSC/gr-ntsc/lib/encntsc.h" bodystart="18" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/griffin/Documents/gr-ntsc/lib/encntsc.h" line="15" column="1" bodyfile="/home/griffin/Documents/gr-ntsc/lib/encntsc.h" bodystart="15" bodyend="19"/>
+    <location file="/home/griffin/NTSC/gr-ntsc/lib/encntsc.h" line="15" column="1" bodyfile="/home/griffin/NTSC/gr-ntsc/lib/encntsc.h" bodystart="15" bodyend="19"/>
     <listofallmembers>
       <member refid="structNTSCEncoder_1a7470cb0bfbb12ecb7c5d520ec8210a52" prot="public" virt="non-virtual"><scope>NTSCEncoder</scope><name>cap</name></member>
       <member refid="structNTSCEncoder_1add8da2e8b22e1be15e5e15f05fc6ebcb" prot="public" virt="non-virtual"><scope>NTSCEncoder</scope><name>fps</name></member>

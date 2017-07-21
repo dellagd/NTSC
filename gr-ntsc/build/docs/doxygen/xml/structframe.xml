@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/griffin/Documents/gr-ntsc/lib/encntsc.h" line="9" column="1" bodyfile="/home/griffin/Documents/gr-ntsc/lib/encntsc.h" bodystart="9" bodyend="-1"/>
+        <location file="/home/griffin/NTSC/gr-ntsc/lib/encntsc.h" line="9" column="1" bodyfile="/home/griffin/NTSC/gr-ntsc/lib/encntsc.h" bodystart="9" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structframe_1adf82e1d5f4132526deb3b1d9d3bc223d" prot="public" static="no" mutable="no">
         <type>float *</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/griffin/Documents/gr-ntsc/lib/encntsc.h" line="10" column="1" bodyfile="/home/griffin/Documents/gr-ntsc/lib/encntsc.h" bodystart="10" bodyend="-1"/>
+        <location file="/home/griffin/NTSC/gr-ntsc/lib/encntsc.h" line="10" column="1" bodyfile="/home/griffin/NTSC/gr-ntsc/lib/encntsc.h" bodystart="10" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structframe_1aedc5735e139ff85b62671775d3e6fc29" prot="public" static="no" mutable="no">
         <type>float *</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/griffin/Documents/gr-ntsc/lib/encntsc.h" line="11" column="1" bodyfile="/home/griffin/Documents/gr-ntsc/lib/encntsc.h" bodystart="11" bodyend="-1"/>
+        <location file="/home/griffin/NTSC/gr-ntsc/lib/encntsc.h" line="11" column="1" bodyfile="/home/griffin/NTSC/gr-ntsc/lib/encntsc.h" bodystart="11" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structframe_1a7b22e0dd68e5d9e2c9b2a1edb6b637c1" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -54,14 +54,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/griffin/Documents/gr-ntsc/lib/encntsc.h" line="12" column="1" bodyfile="/home/griffin/Documents/gr-ntsc/lib/encntsc.h" bodystart="12" bodyend="-1"/>
+        <location file="/home/griffin/NTSC/gr-ntsc/lib/encntsc.h" line="12" column="1" bodyfile="/home/griffin/NTSC/gr-ntsc/lib/encntsc.h" bodystart="12" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/griffin/Documents/gr-ntsc/lib/encntsc.h" line="8" column="1" bodyfile="/home/griffin/Documents/gr-ntsc/lib/encntsc.h" bodystart="8" bodyend="13"/>
+    <location file="/home/griffin/NTSC/gr-ntsc/lib/encntsc.h" line="8" column="1" bodyfile="/home/griffin/NTSC/gr-ntsc/lib/encntsc.h" bodystart="8" bodyend="13"/>
     <listofallmembers>
       <member refid="structframe_1adf82e1d5f4132526deb3b1d9d3bc223d" prot="public" virt="non-virtual"><scope>frame</scope><name>chroma_u</name></member>
       <member refid="structframe_1aedc5735e139ff85b62671775d3e6fc29" prot="public" virt="non-virtual"><scope>frame</scope><name>chroma_v</name></member>

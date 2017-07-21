@@ -20,16 +20,16 @@
         <label>encoder_impl.h</label>
         <link refid="encoder__impl_8h"/>
       </node>
-      <node id="34">
-        <label>encoder.h</label>
-        <link refid="encoder_8h"/>
-        <childnode refid="35" relation="include">
-        </childnode>
-      </node>
       <node id="33">
         <label>api.h</label>
         <link refid="api.h"/>
         <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>encoder.h</label>
+        <link refid="encoder_8h"/>
+        <childnode refid="35" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -43,13 +43,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/griffin/Documents/gr-ntsc/include/ntsc/api.h" line="30" column="12" bodyfile="/home/griffin/Documents/gr-ntsc/include/ntsc/api.h" bodystart="30" bodyend="-1"/>
+        <location file="/home/griffin/NTSC/gr-ntsc/include/ntsc/api.h" line="30" column="12" bodyfile="/home/griffin/NTSC/gr-ntsc/include/ntsc/api.h" bodystart="30" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/griffin/Documents/gr-ntsc/include/ntsc/api.h"/>
+    <location file="/home/griffin/NTSC/gr-ntsc/include/ntsc/api.h"/>
   </compounddef>
 </doxygen>

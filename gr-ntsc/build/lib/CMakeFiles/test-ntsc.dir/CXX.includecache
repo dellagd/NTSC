@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/griffin/Documents/gr-ntsc/lib/qa_ntsc.cc
+/home/griffin/NTSC/gr-ntsc/lib/qa_ntsc.cc
 qa_ntsc.h
-/home/griffin/Documents/gr-ntsc/lib/qa_ntsc.h
+/home/griffin/NTSC/gr-ntsc/lib/qa_ntsc.h
 
-/home/griffin/Documents/gr-ntsc/lib/qa_ntsc.h
+/home/griffin/NTSC/gr-ntsc/lib/qa_ntsc.h
 gnuradio/attributes.h
 -
 cppunit/TestSuite.h
 -
 
-/home/griffin/Documents/gr-ntsc/lib/test_ntsc.cc
+/home/griffin/NTSC/gr-ntsc/lib/test_ntsc.cc
 config.h
-/home/griffin/Documents/gr-ntsc/lib/config.h
+/home/griffin/NTSC/gr-ntsc/lib/config.h
 cppunit/TextTestRunner.h
 -
 cppunit/XmlOutputter.h
@@ -26,7 +26,7 @@ cppunit/XmlOutputter.h
 gnuradio/unittests.h
 -
 qa_ntsc.h
-/home/griffin/Documents/gr-ntsc/lib/qa_ntsc.h
+/home/griffin/NTSC/gr-ntsc/lib/qa_ntsc.h
 iostream
 -
 fstream

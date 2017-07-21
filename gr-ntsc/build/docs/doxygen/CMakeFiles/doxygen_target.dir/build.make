@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/griffin/Documents/gr-ntsc
+CMAKE_SOURCE_DIR = /home/griffin/NTSC/gr-ntsc
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/griffin/Documents/gr-ntsc/build
+CMAKE_BINARY_DIR = /home/griffin/NTSC/gr-ntsc/build
 
 # Utility rule file for doxygen_target.
 
@@ -58,8 +58,8 @@ docs/doxygen/CMakeFiles/doxygen_target: docs/doxygen/html
 
 
 docs/doxygen/xml:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/griffin/Documents/gr-ntsc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating documentation with doxygen"
-	cd /home/griffin/Documents/gr-ntsc/build/docs/doxygen && /usr/bin/doxygen /home/griffin/Documents/gr-ntsc/build/docs/doxygen/Doxyfile
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/griffin/NTSC/gr-ntsc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating documentation with doxygen"
+	cd /home/griffin/NTSC/gr-ntsc/build/docs/doxygen && /usr/bin/doxygen /home/griffin/NTSC/gr-ntsc/build/docs/doxygen/Doxyfile
 
 docs/doxygen/html: docs/doxygen/xml
 	@$(CMAKE_COMMAND) -E touch_nocreate docs/doxygen/html
@@ -77,10 +77,10 @@ docs/doxygen/CMakeFiles/doxygen_target.dir/build: doxygen_target
 .PHONY : docs/doxygen/CMakeFiles/doxygen_target.dir/build
 
 docs/doxygen/CMakeFiles/doxygen_target.dir/clean:
-	cd /home/griffin/Documents/gr-ntsc/build/docs/doxygen && $(CMAKE_COMMAND) -P CMakeFiles/doxygen_target.dir/cmake_clean.cmake
+	cd /home/griffin/NTSC/gr-ntsc/build/docs/doxygen && $(CMAKE_COMMAND) -P CMakeFiles/doxygen_target.dir/cmake_clean.cmake
 .PHONY : docs/doxygen/CMakeFiles/doxygen_target.dir/clean
 
 docs/doxygen/CMakeFiles/doxygen_target.dir/depend:
-	cd /home/griffin/Documents/gr-ntsc/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/griffin/Documents/gr-ntsc /home/griffin/Documents/gr-ntsc/docs/doxygen /home/griffin/Documents/gr-ntsc/build /home/griffin/Documents/gr-ntsc/build/docs/doxygen /home/griffin/Documents/gr-ntsc/build/docs/doxygen/CMakeFiles/doxygen_target.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/griffin/NTSC/gr-ntsc/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/griffin/NTSC/gr-ntsc /home/griffin/NTSC/gr-ntsc/docs/doxygen /home/griffin/NTSC/gr-ntsc/build /home/griffin/NTSC/gr-ntsc/build/docs/doxygen /home/griffin/NTSC/gr-ntsc/build/docs/doxygen/CMakeFiles/doxygen_target.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : docs/doxygen/CMakeFiles/doxygen_target.dir/depend
 

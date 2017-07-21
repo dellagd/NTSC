@@ -4,7 +4,7 @@
 swig/CMakeFiles/_ntsc_swig.dir/ntsc_swigPYTHON_wrap.cxx.o
  ../include/ntsc/api.h
  ../include/ntsc/encoder.h
- /home/griffin/Documents/gr-ntsc/build/swig/ntsc_swigPYTHON_wrap.cxx
+ /home/griffin/NTSC/gr-ntsc/build/swig/ntsc_swigPYTHON_wrap.cxx
  /home/griffin/gnuradio/include/gnuradio/api.h
  /home/griffin/gnuradio/include/gnuradio/attributes.h
  /home/griffin/gnuradio/include/gnuradio/basic_block.h

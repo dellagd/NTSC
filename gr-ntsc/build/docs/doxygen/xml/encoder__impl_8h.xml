@@ -5,6 +5,9 @@
     <includes refid="encoder_8h" local="no">ntsc/encoder.h</includes>
     <includes refid="encntsc_8h" local="yes">encntsc.h</includes>
     <incdepgraph>
+      <node id="52">
+        <label>gnuradio/sync_block.h</label>
+      </node>
       <node id="48">
         <label>encoder_impl.h</label>
         <link refid="encoder_impl.h"/>
@@ -13,29 +16,8 @@
         <childnode refid="53" relation="include">
         </childnode>
       </node>
-      <node id="52">
-        <label>gnuradio/sync_block.h</label>
-      </node>
-      <node id="53">
-        <label>encntsc.h</label>
-        <link refid="encntsc_8h"/>
-        <childnode refid="54" relation="include">
-        </childnode>
-        <childnode refid="55" relation="include">
-        </childnode>
-        <childnode refid="56" relation="include">
-        </childnode>
-      </node>
       <node id="51">
         <label>gnuradio/attributes.h</label>
-      </node>
-      <node id="49">
-        <label>ntsc/encoder.h</label>
-        <link refid="encoder_8h"/>
-        <childnode refid="50" relation="include">
-        </childnode>
-        <childnode refid="52" relation="include">
-        </childnode>
       </node>
       <node id="56">
         <label>opencv2/imgproc/imgproc.hpp</label>
@@ -52,6 +34,24 @@
       <node id="55">
         <label>opencv2/highgui.hpp</label>
       </node>
+      <node id="53">
+        <label>encntsc.h</label>
+        <link refid="encntsc_8h"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>ntsc/encoder.h</label>
+        <link refid="encoder_8h"/>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
     </incdepgraph>
     <innerclass refid="classgr_1_1ntsc_1_1encoder__impl" prot="public">gr::ntsc::encoder_impl</innerclass>
     <innernamespace refid="namespacegr">gr</innernamespace>
@@ -60,6 +60,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/griffin/Documents/gr-ntsc/lib/encoder_impl.h"/>
+    <location file="/home/griffin/NTSC/gr-ntsc/lib/encoder_impl.h"/>
   </compounddef>
 </doxygen>

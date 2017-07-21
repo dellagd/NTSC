@@ -1,4 +1,4 @@
-# Install script for directory: /home/griffin/Documents/gr-ntsc/include/ntsc
+# Install script for directory: /home/griffin/NTSC/gr-ntsc/include/ntsc
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,8 +34,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/ntsc" TYPE FILE FILES
-    "/home/griffin/Documents/gr-ntsc/include/ntsc/api.h"
-    "/home/griffin/Documents/gr-ntsc/include/ntsc/encoder.h"
+    "/home/griffin/NTSC/gr-ntsc/include/ntsc/api.h"
+    "/home/griffin/NTSC/gr-ntsc/include/ntsc/encoder.h"
     )
 endif()
 

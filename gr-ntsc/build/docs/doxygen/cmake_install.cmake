@@ -1,4 +1,4 @@
-# Install script for directory: /home/griffin/Documents/gr-ntsc/docs/doxygen
+# Install script for directory: /home/griffin/NTSC/gr-ntsc/docs/doxygen
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,8 +34,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/doc/gr-ntsc" TYPE DIRECTORY FILES
-    "/home/griffin/Documents/gr-ntsc/build/docs/doxygen/xml"
-    "/home/griffin/Documents/gr-ntsc/build/docs/doxygen/html"
+    "/home/griffin/NTSC/gr-ntsc/build/docs/doxygen/xml"
+    "/home/griffin/NTSC/gr-ntsc/build/docs/doxygen/html"
     )
 endif()
 

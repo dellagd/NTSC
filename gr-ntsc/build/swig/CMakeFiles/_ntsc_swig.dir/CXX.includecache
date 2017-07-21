@@ -16,7 +16,7 @@ ntsc/api.h
 gnuradio/sync_block.h
 -
 
-/home/griffin/Documents/gr-ntsc/build/swig/ntsc_swigPYTHON_wrap.cxx
+/home/griffin/NTSC/gr-ntsc/build/swig/ntsc_swigPYTHON_wrap.cxx
 Python.h
 -
 Python.h
@@ -28,7 +28,7 @@ stdexcept
 string
 -
 gnuradio_swig_bug_workaround.h
-/home/griffin/Documents/gr-ntsc/build/swig/gnuradio_swig_bug_workaround.h
+/home/griffin/NTSC/gr-ntsc/build/swig/gnuradio_swig_bug_workaround.h
 cstddef
 -
 stdexcept
@@ -62,7 +62,7 @@ gnuradio/high_res_timer.h
 limits.h
 -
 ntsc/encoder.h
-/home/griffin/Documents/gr-ntsc/build/swig/ntsc/encoder.h
+/home/griffin/NTSC/gr-ntsc/build/swig/ntsc/encoder.h
 float.h
 -
 math.h
