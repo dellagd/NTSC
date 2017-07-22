@@ -44,8 +44,6 @@ namespace gr {
               gr::io_signature::make(3, 3, sizeof(float))),
       p_filepath(videofile), p_decim(decim), p_use_webcam(use_webcam)
     {
-      set_output_multiple(166370);
-    
       if(!p_use_webcam)
         p_enc = new_ntscencoder_file(const_cast<char*>(p_filepath));
       else
@@ -65,6 +63,9 @@ namespace gr {
       p_ref_frame = get_reference_frame();
       p_vid_frame = new_frame();
       p_repeat = 0;
+      
+      p_frame_length = 166370/p_decim;
+      set_output_multiple(p_frame_length);
     }
 
     /*
@@ -92,10 +93,18 @@ namespace gr {
       }
       
       //printf("noutput_items = %d\n", noutput_items);
-      memcpy(out[0], p_vid_frame.luma, sizeof(float[noutput_items])); 
-      memcpy(out[1], p_vid_frame.chroma_u, sizeof(float[noutput_items])); 
-      memcpy(out[2], p_vid_frame.chroma_v, sizeof(float[noutput_items])); 
-      
+      if (p_decim == 1) {
+        memcpy(out[0], p_vid_frame.luma, sizeof(float[noutput_items])); 
+        memcpy(out[1], p_vid_frame.chroma_u, sizeof(float[noutput_items])); 
+        memcpy(out[2], p_vid_frame.chroma_v, sizeof(float[noutput_items])); 
+      } else {
+        for (int i = 0; i < noutput_items; i++) {
+          out[0][i] = p_vid_frame.luma[i*p_decim];
+          out[1][i] = p_vid_frame.chroma_u[i*p_decim];
+          out[2][i] = p_vid_frame.chroma_v[i*p_decim];
+        }
+      }
+
       // Tell runtime system how many output items we produced.
       return noutput_items;
     }

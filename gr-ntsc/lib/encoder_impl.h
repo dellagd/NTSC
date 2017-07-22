@@ -37,6 +37,7 @@ namespace gr {
       int p_decim;
       size_t p_repeat;
       bool p_use_webcam;
+      int p_frame_length;
 
      public:
       encoder_impl(const char * videofile, int decim, bool use_webcam);
