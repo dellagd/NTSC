@@ -50,21 +50,23 @@ namespace gr {
         p_enc = new_ntscencoder_cam(0);
 
 
-      if ((p_enc.fps < 29) ||
-          (p_enc.fps > 31 && p_enc.fps < 59) || 
-          (p_enc.fps > 61))
-      {
+      bool interlaced;
+      if (p_enc.fps > 29 && p_enc.fps < 31) {
+        interlaced = true;
+      } else if (p_enc.fps > 59 && p_enc.fps < 61) {
+        interlaced = false;
+      } else {
         printf("WARNING: Source has %.2f FPS video, which will "
                "not be transmitted at the correct speed. Use video "
                "of ~30 or ~60 FPS for this block to properly encode it."
                "\n", p_enc.fps);
       }
 
-      p_ref_frame = get_reference_frame();
-      p_vid_frame = new_frame();
+      p_ref_frame = get_reference_frame(interlaced);
+      p_vid_frame = new_frame(interlaced);
       p_repeat = 0;
       
-      p_frame_length = 166370/p_decim;
+      p_frame_length = p_ref_frame.length/p_decim;
       set_output_multiple(p_frame_length);
     }
 
@@ -85,12 +87,12 @@ namespace gr {
       float **out = (float**) &output_items[0]; 
       
       //Send frame twice because not interlacing
-      if (p_repeat == 0 || p_enc.fps > 35) { 
+      //if (p_repeat == 0 || p_enc.fps > 35) { 
         get_frame(p_enc, p_vid_frame, p_ref_frame);
-        p_repeat = 1;
-      } else {
-        p_repeat--;
-      }
+      //  p_repeat = 1;
+      //} else {
+      //  p_repeat--;
+      //}
       
       //printf("noutput_items = %d\n", noutput_items);
       if (p_decim == 1) {

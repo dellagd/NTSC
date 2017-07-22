@@ -41,13 +41,14 @@ void write_frame_to_file(frame f){
 
 int main(int argc, char* argv[])
 { 
-    NTSCEncoder enc = new_ntscencoder(argv[1]);
+    NTSCEncoder enc = new_ntscencoder_file(argv[1]);
+    NTSCEncoder enc1 = new_ntscencoder_cam(0);
 #ifdef DEBUG
     printf("Loaded video from file %s running at %.2f FPS\n", argv[1], enc.fps);
 #endif
 
-    frame f = new_frame();
-    frame ref_frame = get_reference_frame();
+    frame f = new_frame(true);
+    frame ref_frame = get_reference_frame(true);
     
     double usec_per_frame = 1000000.0/enc.fps;
     long int t1;
