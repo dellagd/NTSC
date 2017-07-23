@@ -6,17 +6,19 @@
 
 #include "encntsc.h"
 
-#define ZLEVEL                    0.3f
-#define LINE_LENGTH               635
-#define LINES_PER_FRAME_NONINTER  262
-#define LINES_PER_FRAME_INTER     525
-#define FRAME_LENGTH_NONINTER     (LINE_LENGTH * LINES_PER_FRAME_NONINTER)
-#define FRAME_LENGTH_INTER        (LINE_LENGTH * LINES_PER_FRAME_INTER)
+#define ZLEVEL                        0.3f
+#define LINE_LENGTH                   635
+#define LINES_PER_FRAME_NONINTER      262
+#define LINES_PER_FRAME_INTER         525
+#define VIS_LINES_PER_FRAME_NONINTER  (LINES_PER_FRAME_NONINTER - 20)
+#define VIS_LINES_PER_FRAME_INTER     (LINES_PER_FRAME_INTER - 39)
+#define FRAME_LENGTH_NONINTER         (LINE_LENGTH * LINES_PER_FRAME_NONINTER)
+#define FRAME_LENGTH_INTER            (LINE_LENGTH * LINES_PER_FRAME_INTER)
 
 using namespace cv;
     
 void fill_with_frame_noninter(float *luma, float *chroma_u, float *chroma_v, Mat frame){
-    for (int row = 0; row < LINES_PER_FRAME_NONINTER; row++){
+    for (int row = 0; row < VIS_LINES_PER_FRAME_NONINTER; row++){
         for (int col = 0; col < 526; col++){
             Vec3b p = frame.at<Vec3b>(row, col);
             float im_B = ((float)p.val[0]) / 255.0f;
@@ -36,7 +38,7 @@ void fill_with_frame_noninter(float *luma, float *chroma_u, float *chroma_v, Mat
 }
 
 void fill_with_frame_inter(float *luma, float *chroma_u, float *chroma_v, Mat frame){
-    for (int row = 0; row < LINES_PER_FRAME_INTER; row++){
+    for (int row = 0; row < VIS_LINES_PER_FRAME_INTER; row++){
         for (int col = 0; col < 526; col++){
             Vec3b p = frame.at<Vec3b>(row, col);
             float im_B = ((float)p.val[0]) / 255.0f;
@@ -83,7 +85,7 @@ void init_frame_inter(float* luma, float* chroma_u, float* chroma_v){
     for (int i = 243*LINE_LENGTH; i < 244*LINE_LENGTH; i += LINE_LENGTH){
         for (int j = i; j < i+LINE_LENGTH; j++){
             if ((j-i>=25+292 && j-i<25+292+25)) luma[j] = 0.0f;
-            else if (j-i>=25+292+25) luma[j] = ZLEVEL;
+            else if (j-i>=25+292+25 || (j-i>=47+47 && j-i<25+292)) luma[j] = ZLEVEL;
         }
     }
         
@@ -296,8 +298,8 @@ bool get_frame(NTSCEncoder enc, frame out, frame ref){
         return false;
 
     Mat resized;
-    if (ref.is_inter) resize(rawframe, resized, Size(526, LINES_PER_FRAME_INTER));
-    else resize(rawframe, resized, Size(526, LINES_PER_FRAME_NONINTER));
+    if (ref.is_inter) resize(rawframe, resized, Size(526, VIS_LINES_PER_FRAME_INTER));
+    else resize(rawframe, resized, Size(526, VIS_LINES_PER_FRAME_NONINTER));
 
 #ifdef SHOW_IMAGE
     imshow("window", resized);

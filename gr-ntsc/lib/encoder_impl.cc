@@ -58,8 +58,10 @@ namespace gr {
       } else {
         printf("WARNING: Source has %.2f FPS video, which will "
                "not be transmitted at the correct speed. Use video "
-               "of ~30 or ~60 FPS for this block to properly encode it."
-               "\n", p_enc.fps);
+               "of ~30 or ~60 FPS for this block to properly encode it. "
+               "If you want to transmit video from the PAL standard, I "
+               "recommend ffmpeg for transcoding the video to a compatable "
+               "framerate.\n", p_enc.fps);
       }
 
       p_ref_frame = get_reference_frame(interlaced);
