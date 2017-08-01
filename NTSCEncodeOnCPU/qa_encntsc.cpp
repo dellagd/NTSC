@@ -41,8 +41,9 @@ void write_frame_to_file(frame f){
 
 int main(int argc, char* argv[])
 { 
-    NTSCEncoder enc = new_ntscencoder_file(argv[1]);
-    NTSCEncoder enc1 = new_ntscencoder_cam(0);
+    //NTSCEncoder enc = new_ntscencoder_file(argv[1]);
+    NTSCEncoder enc = new_ntscencoder_cam(0);
+    
 #ifdef DEBUG
     printf("Loaded video from file %s running at %.2f FPS\n", argv[1], enc.fps);
 #endif
@@ -57,6 +58,7 @@ int main(int argc, char* argv[])
         
         if (!get_frame(enc, f, ref_frame))
             break;
+        
 
 #ifdef WRITE_CSV
         write_frame_to_file(f);

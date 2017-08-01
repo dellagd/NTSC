@@ -292,14 +292,15 @@ bool get_frame(NTSCEncoder enc, frame out, frame ref){
       return true;
     }
   
-    Mat rawframe;
-
-    if (!enc.cap.read(rawframe))
-        return false;
-
+    Mat rawframe = enc.tcr->readMat();
+    
     Mat resized;
     if (ref.is_inter) resize(rawframe, resized, Size(526, VIS_LINES_PER_FRAME_INTER));
     else resize(rawframe, resized, Size(526, VIS_LINES_PER_FRAME_NONINTER));
+
+    putText(resized, "KB3ZKL TV", 
+        cvPoint((int)(resized.cols*0.55), (int)(resized.rows*0.9)), 
+        FONT_HERSHEY_SIMPLEX, 1.1, cvScalar(250, 250, 250), 3, CV_AA);
 
 #ifdef SHOW_IMAGE
     imshow("window", resized);
@@ -317,61 +318,97 @@ bool get_frame(NTSCEncoder enc, frame out, frame ref){
 
 NTSCEncoder new_ntscencoder_file(char *filename){
     NTSCEncoder ret;
-    ret.success = false;
-    VideoCapture c(filename);
-    if (!c.isOpened())
-    {
-        std::cout << "!!! Failed to open file: " << filename << std::endl;
-        return ret;
-    }
-    ret.success = true;
-    ret.fps = c.get(CAP_PROP_FPS);
-    ret.cap = c;
+    
+    ret.tcr = new ThreadedCaptureReader(filename);
+    ret.success = ret.tcr->opened;
+    ret.fps = ret.tcr->vidcap.get(CAP_PROP_FPS);
+    
     return ret;
 }
 
 NTSCEncoder new_ntscencoder_cam(size_t camera_num){
     NTSCEncoder ret;
-    ret.success = false;
-    VideoCapture c;
-    if (!c.open(camera_num))
-    {
-        printf("!!! Failed to open camera %d\n", camera_num);
-        return ret;
-    }
-    ret.success = true;
-    ret.fps = c.get(CAP_PROP_FPS);
-    ret.cap = c;
+    
+    ret.tcr = new ThreadedCaptureReader((int)camera_num);
+    ret.success = ret.tcr->opened;
+    ret.fps = ret.tcr->vidcap.get(CAP_PROP_FPS);
+    
     return ret;
 }
 
-/*int main(int argc, char* argv[])
-{ 
-    NTSCEncoder enc = new_encoder(argv[1]);
 
-    //begin_proc(cap); 
-    
-    frame f = new_frame();
-    frame ref_frame = get_reference_frame();
-    
-    double usec_per_frame = 1000000.0/enc.fps;
-    long int t1;
-    for(;;){
-        t1 = getusec();
-        
-        if (!get_frame(enc, f, ref_frame))
-            break;
+static void * readloopEntry(void * self){
+  return static_cast<ThreadedCaptureReader*>(self)->readloop();
+}
 
-        write_frame_to_file(f);
-        
-        char key = cvWaitKey(10);
-        if (key == 27) // ESC
-            break;
-        
-        ttill(t1, usec_per_frame);
+ThreadedCaptureReader::ThreadedCaptureReader(const char *filepath){
+  uses_cam = false;
+  opened = vidcap.open(filepath); 
+
+  make();
+}
+
+ThreadedCaptureReader::ThreadedCaptureReader(int cam_num){
+  uses_cam = true;
+  opened = vidcap.open(cam_num); 
+  
+  make();
+}
+
+ThreadedCaptureReader::~ThreadedCaptureReader(){
+  readFrame.release();
+  writeFrame.release();
+}
+   
+void ThreadedCaptureReader::make(){
+  pthread_mutex_init( &m, NULL);
+  just_read_frame = false;
+
+  if (!opened){
+    printf("!!! Failed to open capture\n");
+    return;  
+  }
+
+  getFrame();
+
+  start();
+  printf("Started capture thread!\n");
+}
+
+bool ThreadedCaptureReader::start(){
+  pthread_create( &looper, NULL, &readloopEntry, this);
+}
+
+void ThreadedCaptureReader::getFrame(){
+  if (!vidcap.read(writeFrame))
+    return;
+  
+  pthread_mutex_lock(&m);
+  writeFrame.copyTo(readFrame);
+  pthread_mutex_unlock(&m);
+}
+
+void *ThreadedCaptureReader::readloop(){
+  int x = 0;
+  for(;;){
+    if (uses_cam) {
+      getFrame();
+    } else if (just_read_frame){
+      getFrame();
+      just_read_frame = false;
+    } else {
+      usleep(1000);
     }
+  }
+}
 
-    return 0;
-}*/
+Mat ThreadedCaptureReader::readMat(){
+  Mat ret;
+  
+  pthread_mutex_lock(&m);
+  readFrame.copyTo(ret);
+  pthread_mutex_unlock(&m);
 
-    
+  just_read_frame = true;
+  return ret;
+}
